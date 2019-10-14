@@ -27,8 +27,8 @@ jobs:
     - name: Publishing .NET project
       run: dotnet publish --configuration Release
     - name: Setup SSH
-      run: |
-        eval "$(ssh-agent -s)"
-        echo ${{ secrets.SSH_MASTER_KEY }} | tr -d '\r' | ssh-add -
+    - uses: webfactory/ssh-agent@v0.1.1
+      with:
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
     - name: Deploy with Rsync
       run: rsync --itemize-changes --compress --verbose --archive --delete-before --update --exclude= --chown=www-josef:www-josef --chmod=Du=rwx,Dgo=rx,Fu=rw,Fgo=r --rsync-path="sudo rsync" --rsh "ssh -p 222 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" * sshztude@ztude.com:/www/website/josef
