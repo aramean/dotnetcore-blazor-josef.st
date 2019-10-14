@@ -15,7 +15,6 @@ jobs:
         sudo dpkg -i packages-microsoft-prod.deb
     - name: Building binaries
       run: |
-        ls
         dotnet restore
         dotnet build
 
@@ -25,6 +24,8 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
+    - name: Publishing .NET project
+      run: dotnet publish --configuration Release
     - name: Setup SSH
       run: |
         eval $(ssh-agent -s)
