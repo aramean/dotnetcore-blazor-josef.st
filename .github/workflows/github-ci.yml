@@ -22,10 +22,10 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
-    - name: Run a multi-line script
+    - name: Setup SSH
       run: |
         apk add rsync openssh-client
         eval $(ssh-agent -s)
-        echo ${{ SSH_MASTER_KEY }} | tr -d '\r' | ssh-add - > /dev/null
+        echo ${{ secrets.SSH_MASTER_KEY }} | tr -d '\r' | ssh-add - > /dev/null
     - name: Deploy with Rsync
       run: rsync --itemize-changes --compress --verbose --archive --delete-before --update --exclude={"$DEPLOY_EXCLUDE"} --chown=$DEPLOY_CHOWN --chmod=Du=rwx,Dgo=rx,Fu=rw,Fgo=r --rsync-path="sudo rsync" --rsh "ssh -p $PROD_SSH_PORT -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" "$DEPLOY_BINARY" "web" "$PROD_SSH_USER"@"$PROD_SSH_HOST":"$PROD_DEPLOY_PATH"
