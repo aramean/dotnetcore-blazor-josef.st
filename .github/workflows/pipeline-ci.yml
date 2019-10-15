@@ -19,7 +19,7 @@ jobs:
     
     steps:
       - uses: actions/checkout@v1
-      - name: Testing binaries
+      - name: Test binaries
         run: |
           dotnet test
   
