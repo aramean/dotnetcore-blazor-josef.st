@@ -27,7 +27,6 @@ jobs:
     - name: Publishing .NET project
       run: dotnet publish --configuration Release
     - name: Setup SSH key
-      uses: ./
       with:
         ssh-private-key: ${{ secrets.PRIVATE_SSH_KEY }}
     - run: |
