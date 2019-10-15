@@ -13,6 +13,10 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
+    - name: Install SSH Key
+      run: |
+        - eval $(ssh-agent -s)
+        - echo ${{ secrets.SSH_MASTER_KEY }} | tr -d '\r' | ssh-add - > /dev/null
     - name: Publish .NET project
       run: dotnet publish --configuration Release
     - name: Deploy with Rsync
