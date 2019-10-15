@@ -33,8 +33,6 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Restore .NET project
-      run: |
-        dotnet restore
-    - name: Publish binaries
-      run: |
-        dotnet publish
+      run: dotnet restore
+    - name: Build binaries
+      run: dotnet build
