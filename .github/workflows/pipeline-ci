@@ -17,14 +17,3 @@ jobs:
       run: |
         dotnet restore
         dotnet build
-
-  deploy:
-
-    runs-on: ubuntu-latest
-    
-    steps:
-    - uses: actions/checkout@v1
-    - name: Publishing .NET project
-      run: dotnet publish --configuration Release
-    - name: Deploy with Rsync
-      run: rsync --itemize-changes --compress --verbose --archive --delete-before --update --exclude= --chown=www-josef:www-josef --chmod=Du=rwx,Dgo=rx,Fu=rw,Fgo=r --rsync-path="sudo rsync" --rsh "ssh -p 222 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" * sshztude@ztude.com:/www/website/josef
