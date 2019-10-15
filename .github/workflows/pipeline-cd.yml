@@ -27,14 +27,6 @@ jobs:
         ssh  -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -T sshztude@ztude.com -p 222
               
     - uses: actions/checkout@v1
-    - name: Setup SSH Keys and known_hosts
-      env:
-        SSH_AUTH_SOCK: /tmp/ssh_agent.sock
-      run: |
-          mkdir -p ~/.ssh
-          ssh-keyscan github.com >> ~/.ssh/known_hosts
-          ssh-agent -a $SSH_AUTH_SOCK > /dev/null
-          ssh-add - <<< "${{ secrets.PRODUCTION_SSH_PRIVATE_KEY }}"
     - name: Publish .NET project
       run: dotnet publish --configuration Release
     - name: Deploy with Rsync
