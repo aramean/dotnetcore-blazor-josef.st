@@ -25,15 +25,14 @@ jobs:
         SSH_AUTH_SOCK: /tmp/ssh_agent.sock
       run: |
         ssh  -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -T sshztude@ztude.com -p 222
-        mkdir -p path/to/artifact
-        echo hello > path/to/artifact/world.txt
-    - uses: actions/upload-artifact@master
-      with:
-        name: my-artifact
-        path: path/to/artifact
               
     - uses: actions/checkout@v1
     - name: Publish .NET project
       run: dotnet publish --configuration Release
+    - uses: actions/upload-artifact@master
+      name: Create artifacts
+      with:
+        name: artifacts
+        path: /home/runner/work/josef.st/josef.st/bin/Release
     - name: Deploy with Rsync
       run: rsync --itemize-changes --compress --archive --delete-before --update --exclude= --chown=www-josef:www-josef --chmod=Du=rwx,Dgo=rx,Fu=rw,Fgo=r --rsync-path="sudo rsync" --rsh "ssh -p 222 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" * sshztude@ztude.com:/www/website/josef
