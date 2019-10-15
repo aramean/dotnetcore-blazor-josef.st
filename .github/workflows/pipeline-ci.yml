@@ -23,10 +23,9 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
-    - name: Restoring .NET project
+    - name: Restore .NET project
       run: |
         dotnet restore
-        dotnet build
-    - name: Publishing binaries
+    - name: Publish binaries
       run: |
         dotnet publish
