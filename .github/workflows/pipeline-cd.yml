@@ -32,6 +32,11 @@ jobs:
       name: Create artifacts
       with:
         name: artifacts
-        path: /home/runner/work/josef.st/josef.st/bin/Release  
-    - name: Deploy with Rsync
+        path: /home/runner/work/josef.st/josef.st/bin/Release
+    - uses: actions/download-artifact@master
+      with:
+        name: Download artifacts
+    - run: cat artifacts
+      
+    - name: Deploy artifacts with Rsync
       run: rsync -v -e "ssh -p222 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" * sshztude@ztude.com:~/www/website/josef
