@@ -1,6 +1,6 @@
 using System;
 
-namespace josef.st.Data
+namespace josef.Data
 {
     public class WeatherForecast
     {
