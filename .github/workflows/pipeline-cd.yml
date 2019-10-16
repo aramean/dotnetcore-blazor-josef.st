@@ -26,8 +26,8 @@ jobs:
       run: |
         ssh  -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -T sshztude@ztude.com -p 222
     - uses: actions/checkout@v1
-    - name: Publish .NET project
-      run: dotnet publish -r linux-x64 -c Release /p:PublishSingleFile=true
+    - name: Publish .NET project for Debian 9
+      run: dotnet publish -c Release -r debian.9-x64 --self-contained
     - uses: actions/upload-artifact@master
       name: Create artifacts
       with:
