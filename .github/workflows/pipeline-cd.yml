@@ -34,4 +34,4 @@ jobs:
         name: artifacts
         path: /home/runner/work/josef.st/josef.st/bin/Release  
     - name: Deploy with Rsync
-      run: rsync -v -e "ssh -p222" * sshztude@ztude.com:~/www/website/josef
+      run: rsync -v -e "ssh -p222 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" * sshztude@ztude.com:~/www/website/josef
