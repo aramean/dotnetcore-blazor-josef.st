@@ -34,8 +34,9 @@ jobs:
         name: artifacts
         path: /home/runner/work/josef.st/josef.st/bin/Release
     - uses: actions/download-artifact@master
+      name: Download artifacts
       with:
-        name: Download artifacts
+        name: artifacts
     - run: cat artifacts
       
     - name: Deploy artifacts with Rsync
