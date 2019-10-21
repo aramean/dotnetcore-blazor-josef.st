@@ -6,20 +6,16 @@ on:
       - master
 
 jobs:
-  deploy:
+  setup:
 
     runs-on: ubuntu-latest
     
     steps:
       - uses: fifsky/ssh-action@master
-      - name: SSH
+      - name: Register Microsoft Key and feed 
         with:
-          command: |
+          command: | 
             cd /www/website/josef
             dotnet new globaljson --sdk-version 3.0.100
             cd github
             make
-          key: ${{ secrets.PRODUCTION_SSH_PRIVATE_KEY }}
-          host: ztude.com
-          user: sshztude
-          port: 222
