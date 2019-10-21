@@ -1,0 +1,25 @@
+name: CD
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: SSH
+      - uses: fifsky/ssh-action@master
+        with:
+          command: |
+            cd /www/website/josef
+            dotnet new globaljson --sdk-version 3.0.100
+            cd github
+            make
+          key: ${{ secrets.PRODUCTION_SSH_PRIVATE_KEY }}
+          host: ztude.com
+          user: sshztude
+          port: 222
