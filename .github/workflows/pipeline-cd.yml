@@ -6,11 +6,27 @@ on:
       - master
 
 jobs:
+  package:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v1
+      - name: Publish .NET project for Debian 9
+        run: dotnet publish -c Release -r debian.9-x64 --self-contained
+      - uses: actions/upload-artifact@master
+        name: Create artifacts
+        with:
+          name: artifacts
+          path: /home/runner/work/josef.st/josef.st/bin/Release
+      - name: Test
+        run: |
+          dotnet new globaljson --sdk-version 3.0.100
 
   deploy:
 
     runs-on: ubuntu-latest
-    
+
     steps:
     - name: Setup SSH Keys and known_hosts
       env:
@@ -25,14 +41,6 @@ jobs:
         SSH_AUTH_SOCK: /tmp/ssh_agent.sock
       run: |
         ssh  -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -T sshztude@ztude.com -p 222
-    - uses: actions/checkout@v1
-    - name: Publish .NET project for Debian 9
-      run: dotnet publish -c Release -r debian.9-x64 --self-contained
-    - uses: actions/upload-artifact@master
-      name: Create artifacts
-      with:
-        name: artifacts
-        path: /home/runner/work/josef.st/josef.st/bin/Release
     - uses: actions/download-artifact@master
       name: Download artifacts
       with:
