@@ -25,5 +25,5 @@ jobs:
       run: |
         ssh  -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -T sshztude@ztude.com -p 222
       
-    - name: Deploy artifacts with Rsync
-      run: cd /www/website/josef/github && make | ssh  -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null sshztude@ztude.com -p 222
+    - name: Run Makefile
+      run: ssh  -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null sshztude@ztude.com -p 222 -t 'cd /www/website/josef/github && make'
