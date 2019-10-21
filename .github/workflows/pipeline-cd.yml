@@ -23,4 +23,4 @@ jobs:
       env:
         SSH_AUTH_SOCK: /tmp/ssh_agent.sock
       run: |
-        ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -T sshztude@ztude.com -p 222 'ls -l'
+        ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -T sshztude@ztude.com -p 222 'cd ${{ secrets.PRODUCTION_SSH_REMOTE_PATH }}; ls -l'
