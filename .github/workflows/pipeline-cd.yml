@@ -23,7 +23,7 @@ jobs:
       env:
         SSH_AUTH_SOCK: /tmp/ssh_agent.sock
       run: |
-        cat remote-box-commands.bash | ssh  -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -T sshztude@ztude.com -p 222
+        ssh  -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -T sshztude@ztude.com -p 222
       
     - name: Deploy artifacts with Rsync
-      run: cat /www/website/josef | ssh  -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null sshztude@ztude.com -p 222
+      run: cd /www/website/josef/github && make | ssh  -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null sshztude@ztude.com -p 222
