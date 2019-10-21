@@ -1,0 +1,51 @@
+name: CD
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  package:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v1
+      - name: Publish .NET project for Debian 9
+        run: dotnet publish -c Release -r debian.9-x64 --self-contained
+      - uses: actions/upload-artifact@master
+        name: Create artifacts
+        with:
+          name: artifacts
+          path: /home/runner/work/josef.st/josef.st/bin/Release
+      - name: Test
+        run: |
+          dotnet new globaljson --sdk-version 3.0.100
+
+  deploy:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Setup SSH Keys and known_hosts
+      env:
+        SSH_AUTH_SOCK: /tmp/ssh_agent.sock
+      run: |
+        mkdir -p ~/.ssh
+        ssh-keyscan github.com >> ~/.ssh/known_hosts
+        ssh-agent -a $SSH_AUTH_SOCK > /dev/null
+        ssh-add - <<< "${{ secrets.PRODUCTION_SSH_PRIVATE_KEY }}"
+    - name: Test SSH connection
+      env:
+        SSH_AUTH_SOCK: /tmp/ssh_agent.sock
+      run: |
+        ssh  -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -T sshztude@ztude.com -p 222
+    - uses: actions/download-artifact@master
+      name: Download artifacts
+      with:
+        name: artifacts
+    - run: cat artifacts
+      
+    - name: Deploy artifacts with Rsync
+      run: rsync -v -e "ssh -p222 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" * sshztude@ztude.com:~/www/website/josef
