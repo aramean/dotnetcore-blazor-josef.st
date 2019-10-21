@@ -23,6 +23,4 @@ jobs:
       env:
         SSH_AUTH_SOCK: /tmp/ssh_agent.sock
       run: |
-        ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -T sshztude@ztude.com -p 222
-    - name: Run Makefile
-      run: ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null sshztude@ztude.com -p 222 'ls -l; ps -aux; whoami'
+        ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -T sshztude@ztude.com -p 222 'ls -l'
