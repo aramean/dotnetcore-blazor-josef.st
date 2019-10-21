@@ -6,16 +6,24 @@ on:
       - master
 
 jobs:
-  setup:
+  deploy:
 
     runs-on: ubuntu-latest
-    
+
     steps:
-      - uses: fifsky/ssh-action@master
-      - name: Register Microsoft Key and feed 
-        with:
-          command: | 
-            cd /www/website/josef
-            dotnet new globaljson --sdk-version 3.0.100
-            cd github
-            make
+    - name: Setup SSH Keys and known_hosts
+      env:
+        SSH_AUTH_SOCK: /tmp/ssh_agent.sock
+      run: |
+        mkdir -p ~/.ssh
+        ssh-keyscan github.com >> ~/.ssh/known_hosts
+        ssh-agent -a $SSH_AUTH_SOCK > /dev/null
+        ssh-add - <<< "${{ secrets.PRODUCTION_SSH_PRIVATE_KEY }}"
+    - name: Test SSH connection
+      env:
+        SSH_AUTH_SOCK: /tmp/ssh_agent.sock
+      run: |
+        cat remote-box-commands.bash | ssh  -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -T sshztude@ztude.com -p 222
+      
+    - name: Deploy artifacts with Rsync
+      run: cat /www/website/josef | ssh  -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null sshztude@ztude.com -p 222
