@@ -49,8 +49,13 @@ app {
     }
 
     .sidebar .navbar-brand {
-        font-size: 1.1rem;
+        padding-top: unset;
     }
+
+        .sidebar .navbar-brand .name {
+            font-size: 0.8rem;
+            font-variant: unicase;
+        }
 
         .sidebar .navbar-brand img {
             height: -webkit-fill-available;
