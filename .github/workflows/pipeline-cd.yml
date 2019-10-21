@@ -19,7 +19,7 @@ jobs:
         ssh-keyscan github.com >> ~/.ssh/known_hosts
         ssh-agent -a $SSH_AUTH_SOCK > /dev/null
         ssh-add - <<< "${{ secrets.PRODUCTION_SSH_PRIVATE_KEY }}"
-    - name: Test SSH connection
+    - name: Deploy with SSH
       env:
         SSH_AUTH_SOCK: /tmp/ssh_agent.sock
       run: |
