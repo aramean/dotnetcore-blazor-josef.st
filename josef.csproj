@@ -4,4 +4,8 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Remove="publish\web.config" />
+    <Content Remove="publish\publish\web.config" />
+  </ItemGroup>
 </Project>
