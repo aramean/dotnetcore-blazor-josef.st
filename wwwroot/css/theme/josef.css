@@ -28,7 +28,9 @@ a,
 
 .main .top-row {
     background-color: #fff7ec;
-    border-bottom: 1px solid #d6d5d5;
+    border-bottom: 1px solid rgba(244,244,244);
+    background: url('/img/aramean_flag.svg');
+    background-position: center;
 }
 
 .sidebar {
@@ -38,3 +40,18 @@ a,
     .sidebar .navbar-brand .name .aramaic {
         color: #fff7ec;
     }
+
+    .sidebar .oi {
+        width: unset;
+        border-radius: 50%;
+        padding: 0.5rem;
+        background: rgba(0,0,0, 0.5);
+        font-size: 1rem;
+        top: -1px;
+        margin-right: 0.5rem;
+    }
+
+.nav-item a.active .nav-item a .sidebar .oi,
+.nav-item a:hover .nav-item a .sidebar .oi {
+    background-color: rgba(0,0,0, 0.9);
+}
