@@ -13,6 +13,7 @@
     <Folder Include="wwwroot\img\" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="BlazorStrap" Version="1.0.106" />
     <PackageReference Include="BuildBundlerMinifier" Version="3.2.435" />
   </ItemGroup>
 </Project>
