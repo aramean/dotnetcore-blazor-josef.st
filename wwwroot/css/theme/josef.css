@@ -28,7 +28,10 @@ a,
 
 .main .top-row {
     background-color: #fff7ec;
-    border-bottom: 1px solid rgba(244,244,244);
+    border-color: #f4f4f4;
+    border-style: solid;
+    border-bottom-width: 1px;
+    border-top-width: 1px;
     background: url('/img/aramean_flag.svg');
     background-position: center;
 }
