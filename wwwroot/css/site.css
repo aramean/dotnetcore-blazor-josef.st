@@ -1,7 +1,7 @@
 @import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
 
-*:focus {
-    outline: none;
+*, *:focus, *:active {
+    outline: none !important;
 }
 
 html, body {
@@ -56,6 +56,10 @@ app {
         padding-top: unset;
     }
 
+        .sidebar .navbar-brand:hover .name .aramaic {
+            opacity: 1 !important;
+        }
+
         .sidebar .navbar-brand .name {
             line-height: 0.8em;
             margin-top: 1rem;
@@ -70,6 +74,7 @@ app {
                 font-size: 0.5em;
                 line-height: 0.5rem;
                 color: #efbbff;
+                opacity: 0.5;
             }
 
         .sidebar .navbar-brand img {
