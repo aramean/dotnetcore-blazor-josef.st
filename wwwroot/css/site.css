@@ -57,9 +57,20 @@ app {
     }
 
         .sidebar .navbar-brand .name {
-            font-size: 0.8rem;
-            font-variant: unicase;
+            line-height: 0.8em;
+            margin-top: 1rem;
         }
+
+            .sidebar .navbar-brand .name .latin {
+                font-size: 0.6em;
+                padding-top: 0.3rem;
+            }
+
+            .sidebar .navbar-brand .name .aramaic {
+                font-size: 0.5em;
+                line-height: 0.5rem;
+                color: #efbbff;
+            }
 
         .sidebar .navbar-brand img {
             height: -webkit-fill-available;
