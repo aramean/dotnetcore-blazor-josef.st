@@ -76,8 +76,10 @@ a,
                 color: #fff;
             }
 
-
-.nav-item a.active .nav-item a .sidebar .oi,
-.nav-item a:hover .nav-item a .sidebar .oi {
+.nav-item a.active .oi {
     background-color: rgba(0,0,0, 0.9);
+}
+
+.nav-item a:hover .oi {
+    background-color: rgba(0,0,0, 0.7);
 }
