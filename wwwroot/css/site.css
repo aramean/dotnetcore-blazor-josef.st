@@ -52,37 +52,39 @@ app {
         background-color: rgba(0,0,0,0.4);
     }
 
-    .sidebar .navbar-brand {
-        padding-top: unset;
+    .sidebar .navbar-brand .name .aramaic {
+        font-size: 0.5em;
+        color: #efbbff;
+        opacity: 0.5;
+        clear: both;
     }
 
-        .sidebar .navbar-brand:hover .name .aramaic {
-            opacity: 1 !important;
+    .sidebar .navbar-brand:hover .name .aramaic {
+        opacity: 1 !important;
+    }
+
+    .sidebar .navbar-brand .name .latin {
+        font-size: 0.6em;
+        padding-top: 0.3rem;
+    }
+
+    .sidebar .navbar-brand .name .dropdown .btn {
+        text-align: left;
+        line-height: normal;
+        padding: 0 1rem 0 0;
+    }
+
+        .sidebar .navbar-brand .name .dropdown .btn::after {
+            border-width: .3em;
+            margin-top: .6rem;
         }
 
-        .sidebar .navbar-brand .name {
-            line-height: 0.8em;
-            margin-top: 1rem;
-        }
-
-            .sidebar .navbar-brand .name .latin {
-                font-size: 0.6em;
-                padding-top: 0.3rem;
-            }
-
-            .sidebar .navbar-brand .name .aramaic {
-                font-size: 0.5em;
-                line-height: 0.5rem;
-                color: #efbbff;
-                opacity: 0.5;
-            }
-
-        .sidebar .navbar-brand img {
-            height: -webkit-fill-available;
-            border: 1px solid rgba(255,255,255, 0.1);
-            box-shadow: 1px 1px 1px rgba(255,255,255, 0.5);
-            margin-right: 0.5rem;
-        }
+    .sidebar .navbar-brand img {
+        height: -webkit-fill-available;
+        border: 1px solid rgba(255,255,255, 0.1);
+        box-shadow: 1px 1px 1px rgba(255,255,255, 0.5);
+        margin-right: 0.5rem;
+    }
 
     .sidebar .oi {
         width: 2rem;
@@ -90,6 +92,8 @@ app {
         vertical-align: text-top;
         top: -2px;
     }
+
+
 
 .nav-item {
     font-size: 0.9rem;

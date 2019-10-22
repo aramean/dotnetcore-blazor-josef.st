@@ -54,6 +54,21 @@ a,
         margin-right: 0.5rem;
     }
 
+    .sidebar .navbar-brand {
+        padding-top: unset;
+    }
+
+
+        .sidebar .navbar-brand .name {
+            line-height: 0.8em;
+            margin-top: 1rem;
+        }
+
+            .sidebar .navbar-brand .name .dropdown .btn {
+                color: #fff;
+            }
+
+
 .nav-item a.active .nav-item a .sidebar .oi,
 .nav-item a:hover .nav-item a .sidebar .oi {
     background-color: rgba(0,0,0, 0.9);
