@@ -8,4 +8,10 @@
     <Content Remove="publish\web.config" />
     <Content Remove="publish\publish\web.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="wwwroot\css\theme\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="BuildBundlerMinifier" Version="3.2.435" />
+  </ItemGroup>
 </Project>

@@ -1,0 +1,40 @@
+﻿/*
+#fff7ec	(255,247,236)
+#96b889	(150,184,137)
+#dd835e	(221,131,94)
+#ae453b	(174,69,59)
+#5c3137	(92,49,55)
+*/
+
+a,
+.btn-link {
+    color: #ae453b;
+}
+
+.btn-primary {
+    background-color: #96b889;
+    border-color: #fff7ec;
+}
+
+    .btn-primary:hover {
+        background-color: #fff7ec;
+        color: #000;
+        border-color: #ae453b;
+    }
+
+    .btn-primary:active {
+        background-color: #ae453b;
+    }
+
+.main .top-row {
+    background-color: #fff7ec;
+    border-bottom: 1px solid #d6d5d5;
+}
+
+.sidebar {
+    background-image: linear-gradient(180deg, #5c3137 0%, #dd835e 70%);
+}
+
+    .sidebar .navbar-brand .name .aramaic {
+        color: #fff7ec;
+    }
