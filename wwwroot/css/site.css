@@ -74,6 +74,10 @@ app {
         padding: 0 1rem 0 0;
     }
 
+        .sidebar .navbar-brand .name .dropdown .btn:focus {
+            box-shadow: none;
+        }
+
         .sidebar .navbar-brand .name .dropdown .btn::after {
             border-width: .3em;
             margin-top: .6rem;
