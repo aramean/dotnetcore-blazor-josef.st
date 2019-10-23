@@ -76,12 +76,16 @@ a,
                 color: #fff;
             }
 
-.nav-item a.active .oi {
-    background-color: rgba(0,0,0, 0.9);
+.nav-item a {
+    line-height: normal;
 }
 
-.nav-item a:hover .oi {
-    background-color: rgba(0,0,0, 0.7);
-    animation: pulse 1s infinite;
-    animation-timing-function: linear;
-}
+    .nav-item a.active .oi {
+        background-color: rgba(0,0,0, 0.9);
+    }
+
+    .nav-item a:hover .oi {
+        background-color: rgba(0,0,0, 0.7);
+        animation: pulse 1s infinite;
+        animation-timing-function: linear;
+    }
