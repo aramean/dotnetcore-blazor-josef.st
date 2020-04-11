@@ -1,4 +1,5 @@
 using josef.Data;
+using System.Net.Http;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpOverrides;
@@ -24,6 +25,7 @@ namespace josef
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddSingleton<PortfolioService>();
+            services.AddSingleton<HttpClient>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
