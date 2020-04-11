@@ -1,13 +1,13 @@
 ﻿@page "/portfolio"
 
 @using josef.Data
-@inject WeatherForecastService ForecastService
+@inject PortfolioService PortfolioService
 
 <h1>Portfolio</h1>
 
 <p>This component demonstrates fetching data from a service.</p>
 
-@if (forecasts == null)
+@if (items == null)
 {
     <p><em>Loading...</em></p>
 }
@@ -23,13 +23,13 @@ else
             </tr>
         </thead>
         <tbody>
-            @foreach (var forecast in forecasts)
+            @foreach (var item in items)
             {
                 <tr>
-                    <td>@forecast.Date.ToShortDateString()</td>
-                    <td>@forecast.TemperatureC</td>
-                    <td>@forecast.TemperatureF</td>
-                    <td>@forecast.Summary</td>
+                    <td>@item.Date.ToShortDateString()</td>
+                    <td>@item.TemperatureC</td>
+                    <td>@item.TemperatureF</td>
+                    <td>@item.Summary</td>
                 </tr>
             }
         </tbody>
@@ -37,10 +37,10 @@ else
 }
 
 @code {
-    WeatherForecast[] forecasts;
+    PortfolioItem[] items;
 
     protected override async Task OnInitializedAsync()
     {
-        forecasts = await ForecastService.GetForecastAsync(DateTime.Now);
+        items = await PortfolioService.GetForecastAsync(DateTime.Now);
     }
 }

@@ -2,7 +2,7 @@ using System;
 
 namespace josef.Data
 {
-    public class WeatherForecast
+    public class PortfolioItem
     {
         public DateTime Date { get; set; }
 
