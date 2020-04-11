@@ -7,7 +7,7 @@ namespace josef.Data
     public class PortfolioService
     {
         private static readonly string[] Summaries = {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+            "Yrkesresan", "Gymnasiedagarna", "Gymnasieantagningen Indra", "Textäventyr", "Hita rätt", "På jobbet", "Syvonline", "GRVux", "Distanspedagogik", "Praktikplatsen"
         };
 
         public Task<PortfolioItem[]> GetForecastAsync(DateTime startDate)
@@ -15,9 +15,9 @@ namespace josef.Data
             var rng = new Random();
             return Task.FromResult(Enumerable.Range(1, 5).Select(index => new PortfolioItem
             {
-                Date = startDate.AddDays(index),
-                TemperatureC = rng.Next(-20, 55),
-                Summary = Summaries[rng.Next(Summaries.Length)]
+                StartDate = startDate.AddDays(index),
+                EndDate = startDate.AddDays(index),
+                Title = Summaries[rng.Next(Summaries.Length)]
             }).ToArray());
         }
     }

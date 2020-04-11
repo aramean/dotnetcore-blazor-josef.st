@@ -17,20 +17,20 @@ else
     <table class="table">
         <thead>
             <tr>
-                <th>Date</th>
-                <th>Temp. (C)</th>
-                <th>Temp. (F)</th>
-                <th>Summary</th>
+                <th>Title</th>
+                <th>Start date</th>
+                <th>End date</th>
+                <th>Duration</th>
             </tr>
         </thead>
         <tbody>
             @foreach (var item in items)
             {
                 <tr>
-                    <td>@item.Date.ToShortDateString()</td>
-                    <td>@item.TemperatureC</td>
-                    <td>@item.TemperatureF</td>
-                    <td>@item.Summary</td>
+                    <td>@item.Title</td>
+                    <td>@item.StartDate.ToShortDateString()</td>
+                    <td>@item.EndDate.ToShortDateString()</td>
+                    <td>@item.Duration</td>
                 </tr>
             }
         </tbody>

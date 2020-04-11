@@ -1,0 +1,16 @@
+﻿{
+  "items": [
+    {
+      "Id": 1,
+      "Title": "Gymnasieantagningen (Indra)",
+      "StartDate": "2018-01-01",
+      "EndDate": "2020-04-02"
+    },
+    {
+      "Id": 2,
+      "Title": "Yrkesresan",
+      "StartDate": "2018-01-01",
+      "EndDate":  "2020-04-02"
+    }
+  ]
+}
