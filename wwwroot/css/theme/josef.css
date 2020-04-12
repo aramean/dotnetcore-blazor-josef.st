@@ -60,13 +60,14 @@ a,
     }
 
     .sidebar .oi {
-        width: unset;
         border-radius: 50%;
-        padding: 0.5rem;
-        background: rgba(0,0,0, 0.5);
-        font-size: 1rem;
+        padding: .6rem;
+        background: rgba(0,0,0,.5);
+        font-size: .8rem;
         top: -1px;
-        margin-right: 0.5rem;
+        margin-right: .5rem;
+        width: 2.6em;
+        height: 2.6em;
     }
 
     .sidebar .navbar-brand {
