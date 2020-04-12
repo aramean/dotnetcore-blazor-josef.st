@@ -11,6 +11,11 @@ a,
     color: #ae453b;
 }
 
+    a:hover {
+        color: #5c3137;
+        text-decoration: none;
+    }
+
 .btn-primary {
     background-color: #96b889;
     border-color: #fff7ec;
@@ -37,11 +42,13 @@ a,
 }
 
     .main .top-row > a {
-        margin-left: 1.5rem;
+        margin-left: 1.2rem;
+        font-size: .8em;
         background: white;
         border: 1px solid;
-        padding: .1rem .3rem .1rem .3rem;
-        border-radius: .3rem;
+        padding: .2rem .3rem .1rem .3rem;
+        border-radius: .1rem;
+        box-shadow: 1px 1px 1px;
     }
 
 .sidebar {
