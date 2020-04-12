@@ -91,7 +91,7 @@
   },
   {
     "Id": 16,
-    "Title": "KUBit",
+    "Title": "Textäventyr",
     "StartDate": "2018-01-01",
     "EndDate": "2020-04-02T00:00:00Z"
   },
@@ -105,6 +105,18 @@
     "Id": 18,
     "Title": "Framtidens Samhällsbyggare",
     "StartDate": "2018-01-01",
-    "EndDate": "2020-04-02T00:00:00Z"
+    "EndDate": "2020-04-02T00:00:00Z",
+    "Description": {
+      "sv_SE": "Framtidens Samhällsbyggare är ett branschöverskridande traineeprogram som startades för att skapa samverkan och möta framtidens utmaningar inom samhällsbyggnad."
+    }
+  },
+  {
+    "Id": 18,
+    "Title": "Västsverige Växer",
+    "StartDate": "2018-01-01",
+    "EndDate": "2020-04-02T00:00:00Z",
+    "Description": {
+      "sv_SE": "Västsverige växer är ett pedagogiskt material om hållbart samhällsbyggande för åk 7-9 samt gymnasiet."
+    }
   }
 ]
