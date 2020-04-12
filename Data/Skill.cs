@@ -16,6 +16,8 @@ namespace josef.Data
         [Display(Name = "None")]
         NONE = 0,
         [Display(Name = "Programming language")]
-        PROGRAMMING_LANGUAGE = 1
+        PROGRAMMING_LANGUAGE = 1,
+        [Display(Name = "Database management system")]
+        DATABASE_MANAGEMENT_SYSTEM = 2
     }
 }

@@ -31,7 +31,7 @@
   {
     "Id": 8,
     "Title": "JavaScript",
-    "Type":  1
+    "Type": 1
   },
   {
     "Id": 9,
@@ -52,27 +52,27 @@
   {
     "Id": 13,
     "Title": "Python",
-    "Type":  1
+    "Type": 1
   },
   {
     "Id": 14,
     "Title": "PHP",
-    "Type":  1
+    "Type": 1
   },
   {
     "Id": 15,
     "Title": "Java EE",
-    "Type":  1
+    "Type": 1
   },
   {
     "Id": 16,
     "Title": "Java for Android",
-    "Type":  1
+    "Type": 1
   },
   {
     "Id": 17,
     "Title": "Go",
-    "Type":  1
+    "Type": 1
   },
   {
     "Id": 18,
@@ -84,7 +84,8 @@
   },
   {
     "Id": 18,
-    "Title": "MariaDB"
+    "Title": "MariaDB",
+    "Type": 2
   },
   {
     "Id": 19,
@@ -96,7 +97,8 @@
   },
   {
     "Id": 21,
-    "Title": "SQL Server"
+    "Title": "SQL Server",
+    "Type": 2
   },
   {
     "Id": 22,
@@ -194,5 +196,10 @@
     "Id": 45,
     "Title": "Android Studio",
     "Type": 0
+  },
+  {
+    "Id": 46,
+    "Title": "PostgresSQL",
+    "Type": 2
   }
 ]
