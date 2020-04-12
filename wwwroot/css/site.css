@@ -92,12 +92,12 @@ app {
 
     .sidebar .oi {
         width: 2rem;
+        min-width: 2rem;
+        text-align: center;
         font-size: 1.1rem;
         vertical-align: text-top;
         top: -2px;
     }
-
-
 
 .nav-item {
     font-size: 0.9rem;

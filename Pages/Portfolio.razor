@@ -11,27 +11,27 @@
 }
 else
 {
-    <table class="table">
-        <thead>
+    <BSTable>
+        <BSTableHead TableHeadType="TableHeadType.None">
             <tr>
                 <th>Title</th>
                 <th>Start date</th>
                 <th>End date</th>
                 <th>Duration</th>
             </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in items)
-            {
-                <tr>
-                    <td>@item.Title</td>
-                    <td>@item.StartDate.ToShortDateString()</td>
-                    <td>@item.EndDate.ToShortDateString()</td>
-                    <td>@item.Duration</td>
-                </tr>
-            }
-        </tbody>
-    </table>
+            </BSTableHead>
+            <tbody>
+                @foreach (var item in items)
+                {
+                    <tr>
+                        <td>@item.Title</td>
+                        <td>@item.StartDate.ToShortDateString()</td>
+                        <td>@item.EndDate.ToShortDateString()</td>
+                        <td>@item.Duration</td>
+                    </tr>
+                }
+            </tbody>
+</BSTable>
 }
 
 @code {
@@ -40,7 +40,7 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        var client = httpClientFactory.CreateClient("portfolioService");
+        var client = httpClientFactory.CreateClient("default");
         items = await client.GetJsonAsync<PortfolioItem[]>("portfolio.json");
     }
 }

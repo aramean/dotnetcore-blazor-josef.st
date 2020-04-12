@@ -1,0 +1,142 @@
+﻿[
+  {
+    "Id": 1,
+    "Title": ".NET Core"
+  },
+  {
+    "Id": 2,
+    "Title": "Blazor"
+  },
+  {
+    "Id": 3,
+    "Title": "Razor"
+  },
+  {
+    "Id": 4,
+    "Title": "DevOps"
+  },
+  {
+    "Id": 5,
+    "Title": "Entity Framework"
+  },
+  {
+    "Id": 6,
+    "Title": "Azure"
+  },
+  {
+    "Id": 7,
+    "Title": "C#"
+  },
+  {
+    "Id": 8,
+    "Title": "JavaScript"
+  },
+  {
+    "Id": 9,
+    "Title": "HTML"
+  },
+  {
+    "Id": 10,
+    "Title": "React"
+  },
+  {
+    "Id": 11,
+    "Title": "Ionic"
+  },
+  {
+    "Id": 12,
+    "Title": "Cordova"
+  },
+  {
+    "Id": 13,
+    "Title": "Python"
+  },
+  {
+    "Id": 14,
+    "Title": "PHP"
+  },
+  {
+    "Id": 15,
+    "Title": "Java EE"
+  },
+  {
+    "Id": 16,
+    "Title": "Java for Android"
+  },
+  {
+    "Id": 17,
+    "Title": "Go"
+  },
+  {
+    "Id": 18,
+    "Title": "WordPress"
+  },
+  {
+    "Id": 18,
+    "Title": "Drupal"
+  },
+  {
+    "Id": 18,
+    "Title": "MariaDB"
+  },
+  {
+    "Id": 19,
+    "Title": "LINQ"
+  },
+  {
+    "Id": 20,
+    "Title": "OData"
+  },
+  {
+    "Id": 21,
+    "Title": "SQL Server"
+  },
+  {
+    "Id": 22,
+    "Title": "Azure Data Studio"
+  },
+  {
+    "Id": 23,
+    "Title": "Docker"
+  },
+  {
+    "Id": 24,
+    "Title": "Kitematic"
+  },
+  {
+    "Id": 25,
+    "Title": "Office 365"
+  },
+  {
+    "Id": 26,
+    "Title": "Visual Basic"
+  },
+  {
+    "Id": 27,
+    "Title": "GIT"
+  },
+  {
+    "Id": 28,
+    "Title": "GitHub"
+  },
+  {
+    "Id": 29,
+    "Title": "GitLab"
+  },
+  {
+    "Id": 30,
+    "Title": "Trello"
+  },
+  {
+    "Id": 31,
+    "Title": "Azure Boards"
+  },
+  {
+    "Id": 32,
+    "Title": "Pivotal Tracker"
+  },
+  {
+    "Id": 33,
+    "Title": "Jira"
+  }
+]

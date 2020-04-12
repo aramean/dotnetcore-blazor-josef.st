@@ -1,0 +1,43 @@
+﻿@page "/skills"
+
+@using josef.Data
+@inject IHttpClientFactory httpClientFactory
+
+<h1>Skills</h1>
+
+@if (items == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <BSTable>
+        <BSTableHead TableHeadType="TableHeadType.None">
+            <tr>
+                <th>Title</th>
+                <th>-</th>
+                <th>-</th>
+                <th>-</th>
+            </tr>
+        </BSTableHead>
+        <tbody>
+            @foreach (var item in items)
+            {
+                <tr>
+                    <td>@item.Title</td>
+                </tr>
+            }
+        </tbody>
+    </BSTable>
+}
+
+@code {
+
+    private Skill[] items;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var client = httpClientFactory.CreateClient("default");
+        items = await client.GetJsonAsync<Skill[]>("skill.json");
+    }
+}

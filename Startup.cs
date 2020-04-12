@@ -23,7 +23,7 @@ namespace josef
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
-            services.AddHttpClient("portfolioService", client =>
+            services.AddHttpClient("default", client =>
             {
                 client.BaseAddress = new Uri(Configuration["BaseUrl"]);
             });
