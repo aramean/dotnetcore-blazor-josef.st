@@ -1,12 +1,9 @@
 ﻿@page "/portfolio"
 
 @using josef.Data
-@inject PortfolioService PortfolioService
-@inject HttpClient HttpClient
+@inject IHttpClientFactory httpClientFactory
 
 <h1>Portfolio</h1>
-
-<p>This component demonstrates fetching data from a service.</p>
 
 @if (items == null)
 {
@@ -38,10 +35,12 @@ else
 }
 
 @code {
-    PortfolioItem[] items;
+
+    private PortfolioItem[] items;
 
     protected override async Task OnInitializedAsync()
     {
-        items = await PortfolioService.GetForecastAsync(DateTime.Now);
+        var client = httpClientFactory.CreateClient("portfolioService");
+        items = await client.GetJsonAsync<PortfolioItem[]>("portfolio.json");
     }
 }

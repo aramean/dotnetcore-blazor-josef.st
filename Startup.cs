@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Net.Http.Headers;
+using System;
 
 namespace josef
 {
@@ -25,7 +27,10 @@ namespace josef
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddSingleton<PortfolioService>();
-            services.AddSingleton<HttpClient>();
+            services.AddHttpClient("portfolioService", client =>
+            {
+                client.BaseAddress = new Uri(Configuration["BaseUrl"]);
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -58,6 +63,7 @@ namespace josef
                 endpoints.MapBlazorHub();
                 endpoints.MapFallbackToPage("/_Host");
             });
+
         }
     }
 }

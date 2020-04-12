@@ -1,16 +1,50 @@
-﻿{
-  "items": [
-    {
-      "Id": 1,
-      "Title": "Gymnasieantagningen (Indra)",
-      "StartDate": "2018-01-01",
-      "EndDate": "2020-04-02"
-    },
-    {
-      "Id": 2,
-      "Title": "Yrkesresan",
-      "StartDate": "2018-01-01",
-      "EndDate":  "2020-04-02"
-    }
-  ]
-}
+﻿[
+  {
+    "Id": 1,
+    "Title": "Gymnasieantagningen (Indra)",
+    "StartDate": "2018-01-01",
+    "EndDate": "2020-04-02T00:00:00Z"
+  },
+  {
+    "Id": 2,
+    "Title": "Yrkesresan",
+    "StartDate": "2018-01-01",
+    "EndDate": "2020-04-02T00:00:00Z"
+  },
+  {
+    "Id": 3,
+    "Title": "GRVux",
+    "StartDate": "2018-01-01",
+    "EndDate": "2020-04-02T00:00:00Z"
+  },
+  {
+    "Id": 4,
+    "Title": "Syvonline",
+    "StartDate": "2018-01-01",
+    "EndDate": "2020-04-02T00:00:00Z"
+  },
+  {
+    "Id": 5,
+    "Title": "Hitta rätt",
+    "StartDate": "2018-01-01",
+    "EndDate": "2020-04-02T00:00:00Z"
+  },
+  {
+    "Id": 6,
+    "Title": "Distanspedagogik",
+    "StartDate": "2018-01-01",
+    "EndDate": "2020-04-02T00:00:00Z"
+  },
+  {
+    "Id": 7,
+    "Title": "Tena",
+    "StartDate": "2018-01-01",
+    "EndDate": "2020-04-02T00:00:00Z"
+  },
+  {
+    "Id": 8,
+    "Title": "Abeer Nehme",
+    "StartDate": "2018-01-01",
+    "EndDate": "2020-04-02T00:00:00Z"
+  }
+]

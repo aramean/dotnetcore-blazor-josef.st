@@ -15,9 +15,9 @@ namespace josef.Data
             var rng = new Random();
             return Task.FromResult(Enumerable.Range(1, 5).Select(index => new PortfolioItem
             {
-                StartDate = startDate.AddDays(index),
-                EndDate = startDate.AddDays(index),
-                Title = Summaries[rng.Next(Summaries.Length)]
+                //StartDate = startDate.AddDays(index),
+                //EndDate = startDate.AddDays(index),
+                //Title = Summaries[rng.Next(Summaries.Length)]
             }).ToArray());
         }
     }
