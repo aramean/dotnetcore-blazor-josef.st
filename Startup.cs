@@ -26,7 +26,6 @@ namespace josef
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
-            services.AddSingleton<PortfolioService>();
             services.AddHttpClient("portfolioService", client =>
             {
                 client.BaseAddress = new Uri(Configuration["BaseUrl"]);
