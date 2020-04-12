@@ -25,11 +25,13 @@
   },
   {
     "Id": 7,
-    "Title": "C#"
+    "Title": "C#",
+    "Type": 1
   },
   {
     "Id": 8,
-    "Title": "JavaScript"
+    "Title": "JavaScript",
+    "Type":  1
   },
   {
     "Id": 9,
@@ -49,23 +51,28 @@
   },
   {
     "Id": 13,
-    "Title": "Python"
+    "Title": "Python",
+    "Type":  1
   },
   {
     "Id": 14,
-    "Title": "PHP"
+    "Title": "PHP",
+    "Type":  1
   },
   {
     "Id": 15,
-    "Title": "Java EE"
+    "Title": "Java EE",
+    "Type":  1
   },
   {
     "Id": 16,
-    "Title": "Java for Android"
+    "Title": "Java for Android",
+    "Type":  1
   },
   {
     "Id": 17,
-    "Title": "Go"
+    "Title": "Go",
+    "Type":  1
   },
   {
     "Id": 18,
@@ -185,6 +192,7 @@
   },
   {
     "Id": 45,
-    "Title": "Android Studio"
+    "Title": "Android Studio",
+    "Type": 0
   }
 ]

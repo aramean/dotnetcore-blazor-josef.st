@@ -12,6 +12,7 @@
     <Folder Include="wwwroot\css\theme\" />
     <Folder Include="wwwroot\img\" />
     <Folder Include="wwwroot\data\" />
+    <Folder Include="Extensions\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="BlazorStrap" Version="1.3.1" />

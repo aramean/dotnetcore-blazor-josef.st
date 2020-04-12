@@ -1,4 +1,6 @@
 using System;
+using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
 
 namespace josef.Data
 {
@@ -6,5 +8,14 @@ namespace josef.Data
     {
         public int Id { get; set; }
         public string Title { get; set; }
+        public TypeEnum Type { get; set; }
+    }
+
+    public enum TypeEnum
+    {
+        [Display(Name = "None")]
+        NONE = 0,
+        [Display(Name = "Programming language")]
+        PROGRAMMING_LANGUAGE = 1
     }
 }

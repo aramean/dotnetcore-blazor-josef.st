@@ -1,43 +1,54 @@
 ﻿@page "/skills"
 
 @using josef.Data
+@using josef.Extensions
+
 @inject IHttpClientFactory httpClientFactory
 
 <h1>Skills</h1>
 
-@if (items == null)
-{
-    <p><em>Loading...</em></p>
-}
-else
-{
-    <BSTable>
-        <BSTableHead TableHeadType="TableHeadType.None">
-            <tr>
-                <th>Title</th>
-                <th>-</th>
-                <th>-</th>
-                <th>-</th>
-            </tr>
-        </BSTableHead>
-        <tbody>
-            @foreach (var item in items)
-            {
-                <tr>
-                    <td>@item.Title</td>
-                </tr>
-            }
-        </tbody>
-    </BSTable>
-}
+<BSBasicForm Class="d-none">
+    <BSFormGroup>
+        <BSFormLabel>Type</BSFormLabel>
+        <BSBasicInput InputType="InputType.Select" Value="@TypeEnum.PROGRAMMING_LANGUAGE.GetDisplayName()" PlaceHolder="Hello"></BSBasicInput>
+    </BSFormGroup>
+</BSBasicForm>
 
-@code {
-
-    private Skill[] items;
-
-    protected override async Task OnInitializedAsync()
+    
+    @if (items == null)
     {
-        var client = httpClientFactory.CreateClient("default");
-        items = await client.GetJsonAsync<Skill[]>("skill.json");
+        <p><em>Loading...</em></p>
     }
-}
+    else
+    {
+        <BSTable>
+            <BSTableHead TableHeadType="TableHeadType.None">
+                <tr>
+                    <th>Skill</th>
+                    <th>Type</th>
+                    <th>-</th>
+                    <th>-</th>
+                </tr>
+            </BSTableHead>
+            <tbody>
+                @foreach (var item in items)
+                {
+                    <tr>
+                        <td>@item.Title</td>
+                        <td>@EnumExtensions.GetDisplayName(item.Type)</td>
+                    </tr>
+                }
+            </tbody>
+        </BSTable>
+    }
+
+    @code {
+
+        private Skill[] items;
+
+        protected override async Task OnInitializedAsync()
+        {
+            var client = httpClientFactory.CreateClient("default");
+            items = await client.GetJsonAsync<Skill[]>("skill.json");
+        }
+    }
