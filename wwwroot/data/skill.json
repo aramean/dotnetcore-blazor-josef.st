@@ -5,11 +5,13 @@
   },
   {
     "Id": 2,
-    "Title": "Blazor"
+    "Title": "Blazor",
+    "Type": 7
   },
   {
     "Id": 3,
-    "Title": "Razor"
+    "Title": "Razor",
+    "Type":  7
   },
   {
     "Id": 4,
@@ -35,19 +37,23 @@
   },
   {
     "Id": 9,
-    "Title": "HTML"
+    "Title": "HTML",
+    "Type":  6
   },
   {
     "Id": 10,
-    "Title": "React"
+    "Title": "React",
+    "Type":  7
   },
   {
     "Id": 11,
-    "Title": "Ionic"
+    "Title": "Ionic",
+    "Type":  12
   },
   {
     "Id": 12,
-    "Title": "Cordova"
+    "Title": "Cordova",
+    "Type":  12
   },
   {
     "Id": 13,
@@ -76,11 +82,13 @@
   },
   {
     "Id": 18,
-    "Title": "WordPress"
+    "Title": "WordPress",
+    "Type":  10
   },
   {
     "Id": 18,
-    "Title": "Drupal"
+    "Title": "Drupal",
+    "Type":  10
   },
   {
     "Id": 18,
@@ -102,7 +110,8 @@
   },
   {
     "Id": 22,
-    "Title": "Azure Data Studio"
+    "Title": "Azure Data Studio",
+    "Type":  9
   },
   {
     "Id": 23,
@@ -118,11 +127,13 @@
   },
   {
     "Id": 26,
-    "Title": "Visual Basic"
+    "Title": "Visual Basic",
+    "Type": 1
   },
   {
     "Id": 27,
-    "Title": "GIT"
+    "Title": "GIT",
+    "Type": 11
   },
   {
     "Id": 28,
@@ -158,23 +169,28 @@
   },
   {
     "Id": 36,
-    "Title": "Visual Studio"
+    "Title": "Visual Studio",
+    "Type":  8
   },
   {
     "Id": 37,
-    "Title": "Visual Studio Code"
+    "Title": "Visual Studio Code",
+    "Type":  8
   },
   {
     "Id": 38,
-    "Title": "Linux"
+    "Title": "Linux",
+    "Type":  3
   },
   {
     "Id": 39,
-    "Title": "macOS"
+    "Title": "macOS",
+    "Type": 3
   },
   {
     "Id": 40,
-    "Title": "Windows Server"
+    "Title": "Windows Server",
+    "Type": 3
   },
   {
     "Id": 41,
@@ -190,16 +206,22 @@
   },
   {
     "Id": 44,
-    "Title": "Eclipse"
+    "Title": "Eclipse",
+    "Type": 8
   },
   {
     "Id": 45,
     "Title": "Android Studio",
-    "Type": 0
+    "Type": 8
   },
   {
     "Id": 46,
     "Title": "PostgresSQL",
     "Type": 2
+  },
+  {
+    "Id": 47,
+    "Title": "SQL Server Management Studio",
+    "Type": 9
   }
 ]
