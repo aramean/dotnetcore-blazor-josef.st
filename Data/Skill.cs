@@ -5,4 +5,5 @@ using System;using System.ComponentModel.DataAnnotations;using System.Runtime.
         [Display(Name = "Markup language")]        MARKUP_LANGUAGE = 6,
         [Display(Name = "Web framework")]        WEB_FRAMEWORK = 7,        [Display(Name = "Integrated Development Environment")]        IDE = 8,
         [Display(Name = "Database Management")]        DATABASE_MANAGEMENT = 9,        [Display(Name = "Content Management System")]        CMS = 10,        [Display(Name = "Distributed version control")]        VERSION_CONTROL = 11,
-        [Display(Name = "Mobile app framework")]        MOBILE_APP_FRAMEWORK = 12,    }}
+        [Display(Name = "Mobile app framework")]        MOBILE_APP_FRAMEWORK = 12,        [Display(Name = "Graphics editor")]        GRAPHICS_EDITOR = 13,
+    }}

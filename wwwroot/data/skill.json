@@ -11,7 +11,7 @@
   {
     "Id": 3,
     "Title": "Razor",
-    "Type":  7
+    "Type": 7
   },
   {
     "Id": 4,
@@ -38,22 +38,22 @@
   {
     "Id": 9,
     "Title": "HTML",
-    "Type":  6
+    "Type": 6
   },
   {
     "Id": 10,
     "Title": "React",
-    "Type":  7
+    "Type": 7
   },
   {
     "Id": 11,
     "Title": "Ionic",
-    "Type":  12
+    "Type": 12
   },
   {
     "Id": 12,
     "Title": "Cordova",
-    "Type":  12
+    "Type": 12
   },
   {
     "Id": 13,
@@ -83,12 +83,12 @@
   {
     "Id": 18,
     "Title": "WordPress",
-    "Type":  10
+    "Type": 10
   },
   {
     "Id": 18,
     "Title": "Drupal",
-    "Type":  10
+    "Type": 10
   },
   {
     "Id": 18,
@@ -111,7 +111,7 @@
   {
     "Id": 22,
     "Title": "Azure Data Studio",
-    "Type":  9
+    "Type": 9
   },
   {
     "Id": 23,
@@ -170,17 +170,17 @@
   {
     "Id": 36,
     "Title": "Visual Studio",
-    "Type":  8
+    "Type": 8
   },
   {
     "Id": 37,
     "Title": "Visual Studio Code",
-    "Type":  8
+    "Type": 8
   },
   {
     "Id": 38,
     "Title": "Linux",
-    "Type":  3
+    "Type": 3
   },
   {
     "Id": 39,
@@ -223,5 +223,25 @@
     "Id": 47,
     "Title": "SQL Server Management Studio",
     "Type": 9
+  },
+  {
+    "Id": 48,
+    "Title": "Adobe Photoshop",
+    "Type": 13
+  },
+  {
+    "Id": 49,
+    "Title": "Adobe Illustrator",
+    "Type": 13
+  },
+  {
+    "Id": 50,
+    "Title": "Gimp",
+    "Type": 13
+  },
+  {
+    "Id": 51,
+    "Title": "Inkscape",
+    "Type": 13
   }
 ]
