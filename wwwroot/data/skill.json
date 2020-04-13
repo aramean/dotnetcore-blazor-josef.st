@@ -243,5 +243,35 @@
     "Id": 51,
     "Title": "Inkscape",
     "Type": 13
+  },
+  {
+    "Id": 52,
+    "Title": "Bash",
+    "Type": 14
+  },
+  {
+    "Id": 53,
+    "Title": "Cascading Style Sheets (CSS)",
+    "Type": 15
+  },
+  {
+    "Id": 54,
+    "Title": "JUnit",
+    "Type": 17
+  },
+  {
+    "Id": 55,
+    "Title": "xUnit",
+    "Type": 17
+  },
+  {
+    "Id": 56,
+    "Title": "Pencil",
+    "Type": 16
+  },
+  {
+    "Id": 57,
+    "Title": "Mockito",
+    "Type": 17
   }
 ]
