@@ -13,46 +13,50 @@
         <BSBasicInput InputType="InputType.Select" Value="@TypeEnum.PROGRAMMING_LANGUAGE.GetDisplayName()" PlaceHolder="Hello"></BSBasicInput>
     </BSFormGroup>
 </BSBasicForm>
-
-    
-    @if (items == null)
-    {
-        <p><em>Loading...</em></p>
-    }
-    else
-    {
-        <BSTable>
-            <BSTableHead TableHeadType="TableHeadType.None">
+<hr />
+<h3>Technical</h3>
+<h5 class="ml-1"><span class="oi oi-tags text-info"></span> Software</h5>
+@if (items == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <BSTable>
+        <BSTableHead TableHeadType="TableHeadType.Light">
+            <tr>
+                <th>Skill</th>
+                <th>Type</th>
+                <th>-</th>
+                <th>-</th>
+            </tr>
+        </BSTableHead>
+        <tbody>
+            @foreach (var item in items)
+            {
                 <tr>
-                    <th>Skill</th>
-                    <th>Type</th>
-                    <th>-</th>
-                    <th>-</th>
+                    <td>@item.Title</td>
+                    <td>@EnumExtensions.GetDisplayName(item.Type)</td>
+                    <td></td>
                 </tr>
-            </BSTableHead>
-            <tbody>
-                @foreach (var item in items)
-                {
-                    <tr>
-                        <td>@item.Title</td>
-                        <td>@EnumExtensions.GetDisplayName(item.Type)</td>
-                        <td></td>
-                    </tr>
-                }
-            </tbody>
-        </BSTable>
+            }
+        </tbody>
+    </BSTable>
+}
+
+<h3>Conceptual</h3>
+<h3>Interpersonal</h3>
+
+@code {
+
+    private Skill[] items;
+
+    public int TotalItems { get; set; } = 0;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var client = httpClientFactory.CreateClient("default");
+        items = await client.GetJsonAsync<Skill[]>("skill.json");
+        TotalItems = items.Count();
     }
-
-    @code {
-
-        private Skill[] items;
-
-        public int TotalItems { get; set; } = 0;
-
-        protected override async Task OnInitializedAsync()
-        {
-            var client = httpClientFactory.CreateClient("default");
-            items = await client.GetJsonAsync<Skill[]>("skill.json");
-            TotalItems = items.Count();
-        }
-    }
+}

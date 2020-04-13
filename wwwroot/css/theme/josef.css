@@ -106,3 +106,12 @@ a,
         animation: pulse 1s infinite;
         animation-timing-function: linear;
     }
+
+.table .thead-light th {
+    background-color: #F9F9F9;
+    border-color: #F3F3F3;
+}
+
+.text-info {
+    color: #DC825D !important;
+}
