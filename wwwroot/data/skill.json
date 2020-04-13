@@ -23,7 +23,8 @@
   },
   {
     "Id": 6,
-    "Title": "Azure"
+    "Title": "Microsoft Azure",
+    "Type":  21
   },
   {
     "Id": 7,
@@ -137,35 +138,43 @@
   },
   {
     "Id": 28,
-    "Title": "GitHub"
+    "Title": "GitHub",
+    "Type":  19
   },
   {
     "Id": 29,
-    "Title": "GitLab"
+    "Title": "GitLab",
+    "Type": 19
   },
   {
     "Id": 30,
-    "Title": "Trello"
+    "Title": "Trello",
+    "Type":  20
   },
   {
     "Id": 31,
-    "Title": "Azure Boards"
+    "Title": "Azure Boards",
+    "Type":  20
   },
   {
     "Id": 32,
-    "Title": "Pivotal Tracker"
+    "Title": "Pivotal Tracker",
+    "Type": 20
   },
   {
     "Id": 33,
-    "Title": "Jira"
+    "Title": "Jira",
+    "Type":  20
   },
   {
     "Id": 34,
-    "Title": "Bootstrap"
+    "Title": "Bootstrap",
+    "Type": 7
   },
   {
     "Id": 35,
-    "Title": "jQuery"
+    "Title": "jQuery",
+    "Type":  18
   },
   {
     "Id": 36,

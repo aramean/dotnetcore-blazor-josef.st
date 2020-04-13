@@ -10,6 +10,14 @@ using System;using System.ComponentModel.DataAnnotations;using System.Runtime.
         [Display(Name = "Style language")]        STYLE_LANGUAGE = 15,
         [Display(Name = "GUI prototyping tool")]        GUI_PROTOTYPING_TOOL = 16,
         [Display(Name = "Testing Framework")]        TESTING_FRAMEWORK = 17,
+        [Display(Name = "JavaScript library")]
+        JS_LIBRARY = 18,
+        [Display(Name = "Collaborative version control")]
+        COLLAB_VERSION_CONTROL = 19,
+        [Display(Name = "Project management software")]
+        PROJECT_MANAGEMENT_SOFTWARE = 20,
+        [Display(Name = "Cloud computing service")]
+        CLOUD_COMPUTING = 21
     }    public enum SkillCategory
     {
         [Display(Name = "Technical")]
