@@ -5,7 +5,7 @@
 
 @inject IHttpClientFactory httpClientFactory
 
-<h1>Skills</h1>
+<h1><BSBadge>@TotalItems</BSBadge> Skills</h1>
 
 <BSBasicForm Class="d-none">
     <BSFormGroup>
@@ -47,9 +47,12 @@
 
         private Skill[] items;
 
+        public int TotalItems { get; set; } = 0;
+
         protected override async Task OnInitializedAsync()
         {
             var client = httpClientFactory.CreateClient("default");
             items = await client.GetJsonAsync<Skill[]>("skill.json");
+            TotalItems = items.Count();
         }
     }

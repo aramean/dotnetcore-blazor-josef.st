@@ -17,8 +17,8 @@ a,
     }
 
 .btn-primary {
-    background-color: #96b889;
-    border-color: #fff7ec;
+    background-color: #96b889 !important;
+    border-color: #fff7ec !important;
 }
 
     .btn-primary:hover {
@@ -30,6 +30,15 @@ a,
     .btn-primary:active {
         background-color: #ae453b;
     }
+
+    .btn-primary:focus {
+        box-shadow: none !important;
+    }
+
+.badge-primary {
+    background-color: #5c3137;
+    vertical-align: top;
+}
 
 .main .top-row {
     background-color: #fff7ec;
