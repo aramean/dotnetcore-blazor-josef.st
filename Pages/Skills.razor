@@ -5,7 +5,7 @@
 
 @inject IHttpClientFactory httpClientFactory
 
-<BSButton Class="float-right" Color="Color.Primary" @onclick="@(e => collapse(e))">Filter @( IsOpen ? "-" : "+")</BSButton>
+<BSButton Class="float-right btn-sm mt-2" Color="Color.Primary" @onclick="@(e => collapse(e))">Filter @( IsOpen ? "-" : "+")</BSButton>
 <h1><BSBadge>@TotalItems</BSBadge> Skills</h1>
 <BSCollapse IsOpen="@IsOpen">
     <BSBasicForm Class="filter p-3 rounded">
