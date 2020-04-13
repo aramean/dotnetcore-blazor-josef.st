@@ -5,58 +5,84 @@
 
 @inject IHttpClientFactory httpClientFactory
 
+<BSButton Class="float-right" Color="Color.Primary" @onclick="@(e => collapse(e))">Filter @( IsOpen ? "-" : "+")</BSButton>
 <h1><BSBadge>@TotalItems</BSBadge> Skills</h1>
-
-<BSBasicForm Class="d-none">
-    <BSFormGroup>
-        <BSFormLabel>Type</BSFormLabel>
-        <BSBasicInput InputType="InputType.Select" Value="@TypeEnum.PROGRAMMING_LANGUAGE.GetDisplayName()" PlaceHolder="Hello"></BSBasicInput>
-    </BSFormGroup>
-</BSBasicForm>
-<hr />
-<h3>Technical</h3>
-<h5 class="ml-1"><span class="oi oi-tags text-info"></span> Software</h5>
-@if (items == null)
-{
-    <p><em>Loading...</em></p>
-}
-else
-{
-    <BSTable>
-        <BSTableHead TableHeadType="TableHeadType.Light">
-            <tr>
-                <th>Skill</th>
-                <th>Type</th>
-                <th>-</th>
-                <th>-</th>
-            </tr>
-        </BSTableHead>
-        <tbody>
-            @foreach (var item in items)
-            {
-                <tr>
-                    <td>@item.Title</td>
-                    <td>@EnumExtensions.GetDisplayName(item.Type)</td>
-                    <td></td>
-                </tr>
-            }
-        </tbody>
-    </BSTable>
-}
-
-<h3>Conceptual</h3>
-<h3>Interpersonal</h3>
-
-@code {
-
-    private Skill[] items;
-
-    public int TotalItems { get; set; } = 0;
-
-    protected override async Task OnInitializedAsync()
+<BSCollapse IsOpen="@IsOpen">
+    <BSBasicForm Class="filter p-3 rounded">
+        <BSFormRow>
+            <BSFormGroup Class="col-4 m-0">
+                <BSBasicInput InputType="InputType.Text" Value="string.Empty" PlaceHolder="Free text"></BSBasicInput>
+            </BSFormGroup>
+            <BSFormGroup Class="col-4 m-0">
+                <BSBasicInput InputType="InputType.Select" Value="string.Empty" PlaceHolder="Hello">
+                    @foreach (var name in Enum.GetValues(typeof(SkillCategory)))
+                    {
+                        <option value="@((int)name)">@EnumExtensions.GetDisplayName(SkillCategory.CONCEPTUAL)</option>
+                    }
+                </BSBasicInput>
+            </BSFormGroup>
+            <BSFormGroup Class="col-4 m-0">
+                <BSBasicInput InputType="InputType.Select" Value="string.Empty" PlaceHolder="Hello">
+                    @foreach (var name in Enum.GetValues(typeof(SkillType)))
+                    {
+                        <option value="@((int)name)">@name</option>
+                    }
+                </BSBasicInput>
+            </BSFormGroup>
+        </BSFormRow>
+    </BSBasicForm>
+</BSCollapse>
+    <hr />
+    <h3>Technical</h3>
+    <h5 class="ml-1"><span class="oi oi-tag text-info"></span> Software</h5>
+    @if (items == null)
     {
-        var client = httpClientFactory.CreateClient("default");
-        items = await client.GetJsonAsync<Skill[]>("skill.json");
-        TotalItems = items.Count();
+        <p><em>Loading...</em></p>
     }
-}
+    else
+    {
+        <BSTable>
+            <BSTableHead TableHeadType="TableHeadType.Light">
+                <tr>
+                    <th>Skill</th>
+                    <th>Type</th>
+                    <th>-</th>
+                    <th>-</th>
+                </tr>
+            </BSTableHead>
+            <tbody>
+                @foreach (var item in items)
+                {
+                    <tr>
+                        <td>@item.Title</td>
+                        <td>@EnumExtensions.GetDisplayName(item.Type)</td>
+                        <td></td>
+                    </tr>
+                }
+            </tbody>
+        </BSTable>
+    }
+
+    <h3>Conceptual</h3>
+    <h3>Interpersonal</h3>
+
+    @code {
+
+        private Skill[] items;
+
+        public int TotalItems { get; set; } = 0;
+        bool IsOpen { get; set; } = false;
+
+        void collapse(MouseEventArgs a)
+        {
+            IsOpen = !IsOpen;
+            StateHasChanged();
+        }
+
+        protected override async Task OnInitializedAsync()
+        {
+            var client = httpClientFactory.CreateClient("default");
+            items = await client.GetJsonAsync<Skill[]>("skill.json");
+            TotalItems = items.Count();
+        }
+    }

@@ -1,4 +1,4 @@
-using System;using System.ComponentModel.DataAnnotations;using System.Runtime.Serialization;namespace josef.Data{    public class Skill    {        public int Id { get; set; }        public string Title { get; set; }        public TypeEnum Type { get; set; }    }    public enum TypeEnum    {        [Display(Name = "None")]        NONE = 0,        [Display(Name = "Programming language")]        PROGRAMMING_LANGUAGE = 1,        [Display(Name = "Database Management System")]        DATABASE_MANAGEMENT_SYSTEM = 2,
+using System;using System.ComponentModel.DataAnnotations;using System.Runtime.Serialization;namespace josef.Data{    public class Skill    {        public int Id { get; set; }        public string Title { get; set; }        public SkillCategory Category { get; set; }        public SkillType Type { get; set; }    }    public enum SkillType    {        [Display(Name = "None")]        NONE = 0,        [Display(Name = "Programming language")]        PROGRAMMING_LANGUAGE = 1,        [Display(Name = "Database Management System")]        DATABASE_MANAGEMENT_SYSTEM = 2,
         [Display(Name = "Operating System")]        OS = 3,
         [Display(Name = "User Interface Framework")]        UI_FRAMEWORK = 4,
         [Display(Name = "Platform")]        PLATFORM = 5,
@@ -10,4 +10,7 @@ using System;using System.ComponentModel.DataAnnotations;using System.Runtime.
         [Display(Name = "Style language")]        STYLE_LANGUAGE = 15,
         [Display(Name = "GUI prototyping tool")]        GUI_PROTOTYPING_TOOL = 16,
         [Display(Name = "Testing Framework")]        TESTING_FRAMEWORK = 17,
-    }}
+    }    public enum SkillCategory
+    {
+        [Display(Name = "Technical")]
+        TECHNICAL = 1,        [Display(Name = "Conceptual")]        CONCEPTUAL = 2,        [Display(Name = "Interpersonal")]        INTERPERSONAL = 3,    }}

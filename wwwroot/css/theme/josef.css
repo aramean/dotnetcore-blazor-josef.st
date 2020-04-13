@@ -115,3 +115,11 @@ a,
 .text-info {
     color: #DC825D !important;
 }
+
+.filter {
+    background-image: linear-gradient(90deg,#5c3137 0%,#dd835e 70%);
+}
+
+.border-dark {
+    border-color: #5c3137 !important;
+}
