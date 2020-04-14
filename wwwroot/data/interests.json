@@ -27,6 +27,21 @@
   {
     "Id": 6,
     "Title": "Music",
-    "Comment": "Since my childhood I was interested in music. I've started to sing at early age and now I consider myself as a professional singer."
+    "Comment": "Since my childhood, I was interested in music. I've started to sing at an early age and now I consider myself as a professional singer."
+  },
+  {
+    "Id": 7,
+    "Title": "Psychology",
+    "Comment": ""
+  },
+  {
+    "Id": 8,
+    "Title": "Theology",
+    "Comment": "As a Christian, I have a strong faith in God. I'm not ashamed of what I believe in. Christianity and the Bible make sense to me and gives me hope when there is none. I have studied the Bible since childhood."
+  },
+  {
+    "Id": 9,
+    "Title": "History",
+    "Comment": "History has always been a part of my Aramean identity."
   }
 ]
