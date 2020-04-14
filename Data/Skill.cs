@@ -17,7 +17,12 @@ using System;using System.ComponentModel.DataAnnotations;using System.Runtime.
         [Display(Name = "Project management software")]
         PROJECT_MANAGEMENT_SOFTWARE = 20,
         [Display(Name = "Cloud computing service")]
-        CLOUD_COMPUTING = 21
+        CLOUD_COMPUTING = 21,
+        [Display(Name = "OS-level virtualization")]
+        OS_VIRTUALIZATION = 22,
+        [Display(Name = "Testing Tool")]
+        TESTING_TOOL = 23,
+
     }    public enum SkillCategory
     {
         [Display(Name = "Technical")]

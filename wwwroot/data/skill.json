@@ -116,7 +116,8 @@
   },
   {
     "Id": 23,
-    "Title": "Docker"
+    "Title": "Docker",
+    "Type": 22
   },
   {
     "Id": 24,
@@ -203,15 +204,18 @@
   },
   {
     "Id": 41,
-    "Title": "Locust"
+    "Title": "Locust",
+    "Type": 17
   },
   {
     "Id": 42,
-    "Title": "Postman"
+    "Title": "Postman",
+    "Type": 23
   },
   {
     "Id": 43,
-    "Title": "Insomnia"
+    "Title": "Insomnia",
+    "Type": 23
   },
   {
     "Id": 44,
