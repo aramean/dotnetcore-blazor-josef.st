@@ -7,21 +7,27 @@
   {
     "Id": 2,
     "Quotation": "There are three kinds of creators. The first steals from the world, the second steals from his neighbor. The third is using the inspiration source within.",
-    "PublishDate": "2019-02-29T12:10"
+    "PublishDate": "2020-02-29T12:10"
   },
   {
     "Id": 3,
     "Quotation": "A limited scientist can't see beyond materia",
-    "PublishDate": "2019-02-29T13:05"
+    "PublishDate": "2020-02-29T13:05"
   },
   {
     "Id": 4,
     "Quotation": "A genius must always protect the mind against intruders.",
-    "PublishDate": "2019-02-29T11:45"
+    "PublishDate": "2020-02-29T11:45"
   },
   {
     "Id": 5,
     "Quotation": "The best way to learn and develop is to observe the stupidy of humanity.",
-    "PublishDate": "2019-02-29T11:11:34"
+    "PublishDate": "2020-02-29T11:11:34"
+  },
+  {
+    "Id": 6,
+    "Quotation": "The water level remains the same when the ice cube melts.",
+    "PublishDate": "2020-02-25T22:45"
+
   }
 ]
