@@ -82,7 +82,7 @@
         protected override async Task OnInitializedAsync()
         {
             var client = httpClientFactory.CreateClient("default");
-            items = await client.GetJsonAsync<Skill[]>("skill.json");
+            items = await client.GetJsonAsync<Skill[]>("skills.json");
             TotalItems = items.Count();
         }
     }
