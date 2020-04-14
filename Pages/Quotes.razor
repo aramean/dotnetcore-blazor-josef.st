@@ -13,12 +13,24 @@
     }
     else
     {
+        int i = 0;
+        string move;
+
         @foreach (var item in items)
         {
-            <blockquote class="blockquote text-right">
-            <p class="mb-0">"@item.Quotation"</p>
+            if (i%2 == 0)
+            {
+                move = "right";
+            }
+            else
+            {
+                move = "left";
+            }
+            <blockquote class="blockquote @move">
+            <p class="mb-0">@item.Quotation</p>
                 <footer class="blockquote-footer"><cite title="Josef Gabrielsson">Josef Gabrielsson</cite></footer>
-            </blockquote>          
+            </blockquote>
+            i++;
         }
     }
 
