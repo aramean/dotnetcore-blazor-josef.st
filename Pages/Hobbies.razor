@@ -1,0 +1,82 @@
+﻿@page "/hobbies"
+
+@using josef.Data
+@using josef.Extensions
+
+@inject IHttpClientFactory httpClientFactory
+
+<BSButton Class="float-right btn-sm mt-2" Color="Color.Primary" @onclick="@(e => collapse(e))">Filter @( IsOpen ? "-" : "+")</BSButton>
+<h1><BSBadge>@TotalItems</BSBadge> Hobbies</h1>
+<BSCollapse IsOpen="@IsOpen">
+    <BSBasicForm Class="filter p-3 rounded">
+        <BSFormRow>
+            <BSFormGroup Class="col-4 m-0">
+                <BSBasicInput InputType="InputType.Text" Value="string.Empty" PlaceHolder="Free text"></BSBasicInput>
+            </BSFormGroup>
+            <BSFormGroup Class="col-4 m-0">
+                <BSBasicInput InputType="InputType.Select" Value="string.Empty" PlaceHolder="Hello">
+                    @foreach (var name in Enum.GetValues(typeof(SkillCategory)))
+                    {
+                        <option value="@((int)name)">@EnumExtensions.GetDisplayName(SkillCategory.CONCEPTUAL)</option>
+                    }
+                </BSBasicInput>
+            </BSFormGroup>
+            <BSFormGroup Class="col-4 m-0">
+                <BSBasicInput InputType="InputType.Select" Value="string.Empty" PlaceHolder="Hello">
+                    @foreach (var name in Enum.GetValues(typeof(SkillType)))
+                    {
+                        <option value="@((int)name)">@name</option>
+                    }
+                </BSBasicInput>
+            </BSFormGroup>
+        </BSFormRow>
+    </BSBasicForm>
+</BSCollapse>
+    <hr />
+    @if (items == null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else
+    {
+        <BSTable>
+            <BSTableHead TableHeadType="TableHeadType.Light">
+                <tr>
+                    <th>Hobby</th>
+                    <th>-</th>
+                    <th>-</th>
+                    <th>-</th>
+                </tr>
+            </BSTableHead>
+            <tbody>
+                @foreach (var item in items)
+                {
+                    <tr>
+                        <td>@item.Title</td>
+                        <td></td>
+                    </tr>
+                }
+            </tbody>
+        </BSTable>
+    }
+
+    @code {
+
+        private Interest[] items;
+
+        public int TotalItems { get; set; } = 0;
+        bool IsOpen { get; set; } = false;
+
+        void collapse(MouseEventArgs a)
+        {
+            IsOpen = !IsOpen;
+            StateHasChanged();
+        }
+
+        protected override async Task OnInitializedAsync()
+        {
+            var client = httpClientFactory.CreateClient("default");
+            items = await client.GetJsonAsync<Interest[]>("hobbies.json");
+            TotalItems = items.Count();
+        }
+    }

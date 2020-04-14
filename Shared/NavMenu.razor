@@ -19,4 +19,9 @@
                 <span class="oi oi-thumb-up" aria-hidden="true"></span> Interests
             </NavLink>
         </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="hobbies">
+                <span class="oi oi-heart" aria-hidden="true"></span> Hobbies
+            </NavLink>
+        </li>
     </ul></div>@code {    bool collapseNavMenu = true;    string NavMenuCssClass => collapseNavMenu ? "collapse" : null;    void ToggleNavMenu()    {        collapseNavMenu = !collapseNavMenu;    }}
