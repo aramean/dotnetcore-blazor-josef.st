@@ -28,5 +28,40 @@
     "Id": 6,
     "Quotation": "The water level remains the same when the ice cube melts.",
     "PublishDate": "2020-02-25T22:45"
+  },
+  {
+    "Id": 7,
+    "Quotation": "The wise seek the truth, and the fool makes his truth.",
+    "PublishDate": "2020-02-18T21:31"
+  },
+  {
+    "Id": 8,
+    "Quotation": "Everyone can read books, but not everyone can understand what is in the books.",
+    "PublishDate": "2020-02-18T21:22"
+  },
+  {
+    "Id": 9,
+    "Quotation": "It is better to study for yourselves than to let a deceiver educate you.",
+    "PublishDate": "2020-02-08T23:57"
+  },
+  {
+    "Id": 10,
+    "Quotation": "Evil has no age.",
+    "PublishDate": "2019-11-29T13:36"
+  },
+  {
+    "Id": 11,
+    "Quotation": "It's easy to talk freely, but harder to stick to a subject!",
+    "PublishDate": "2020-04-15T00:27"
+  },
+  {
+    "Id": 12,
+    "Quotation": "Languages are created out of confusions and misunderstandings.",
+    "PublishDate": "2019-06-10T19:02"
+  },
+  {
+    "Id": 13,
+    "Quotation": "There is a difference between knowing the word and understanding the meaning of the word.",
+      "PublishDate": "2019-06-08T17:52"
   }
 ]
