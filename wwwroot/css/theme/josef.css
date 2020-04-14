@@ -47,7 +47,7 @@ a,
     border-style: solid;
     border-bottom-width: 1px;
     border-top-width: 1px;
-    background: url('/img/aramean_flag.svg');
+    background-image: url('/img/aramean_flag.svg');
     background-position: center;
 }
 
