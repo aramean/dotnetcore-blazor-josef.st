@@ -125,7 +125,8 @@
   },
   {
     "Id": 25,
-    "Title": "Office 365"
+    "Title": "Office 365",
+    "Type": 24
   },
   {
     "Id": 26,

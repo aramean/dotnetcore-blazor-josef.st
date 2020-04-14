@@ -22,6 +22,8 @@ using System;using System.ComponentModel.DataAnnotations;using System.Runtime.
         OS_VIRTUALIZATION = 22,
         [Display(Name = "Testing Tool")]
         TESTING_TOOL = 23,
+        [Display(Name = "Software as a service")]
+        SAAS = 24,
 
     }    public enum SkillCategory
     {
