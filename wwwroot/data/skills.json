@@ -24,7 +24,7 @@
   {
     "Id": 6,
     "Title": "Microsoft Azure",
-    "Type":  21
+    "Type": 21
   },
   {
     "Id": 7,
@@ -141,7 +141,7 @@
   {
     "Id": 28,
     "Title": "GitHub",
-    "Type":  19
+    "Type": 19
   },
   {
     "Id": 29,
@@ -151,12 +151,12 @@
   {
     "Id": 30,
     "Title": "Trello",
-    "Type":  20
+    "Type": 20
   },
   {
     "Id": 31,
     "Title": "Azure Boards",
-    "Type":  20
+    "Type": 20
   },
   {
     "Id": 32,
@@ -166,7 +166,7 @@
   {
     "Id": 33,
     "Title": "Jira",
-    "Type":  20
+    "Type": 20
   },
   {
     "Id": 34,
@@ -176,7 +176,7 @@
   {
     "Id": 35,
     "Title": "jQuery",
-    "Type":  18
+    "Type": 18
   },
   {
     "Id": 36,
@@ -287,5 +287,10 @@
     "Id": 57,
     "Title": "Mockito",
     "Type": 17
+  },
+  {
+    "Id": 58,
+    "Title": "Fat-Free Framework",
+    "Type": 7
   }
 ]
