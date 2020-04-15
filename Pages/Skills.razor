@@ -40,7 +40,11 @@
 }
 else
 {
-    <h3>Technical</h3>
+    @foreach(var category in Enum.GetValues(typeof(SkillCategory))) {
+
+       var categoryEnum = (SkillCategory) Enum.Parse(typeof(SkillCategory), category.ToString());
+
+    <h3>@EnumExtensions.GetDisplayName(categoryEnum)</h3>
     <nav>
         <div class="nav nav-tabs border-0" id="nav-tab" role="tablist">
             <a class="nav-item nav-link bg-light border-0 active" id="nav-home-tab" data-toggle="tab" role="tab" aria-controls="nav-home" aria-selected="true"><h5>Software</h5></a>
@@ -66,10 +70,8 @@ else
             }
         </tbody>
     </BSTable>
+    }
 }
-
-<h3>Conceptual</h3>
-<h3>Interpersonal</h3>
 
 @code {
 

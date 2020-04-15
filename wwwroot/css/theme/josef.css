@@ -127,11 +127,10 @@ a,
 
 blockquote {
     font-size: 1rem !important;
-    width: 60%;
     margin: 15px auto;
     font-style: italic;
     color: #555555;
-    padding: 1.2em 30px 1.2em 70px;
+    padding: 1.2em 70px 1.2em 70px;
     line-height: 1.6;
     position: relative;
     background: #f9f9f9;
@@ -142,18 +141,17 @@ blockquote {
     -webkit-transition: opacity .25s ease-in-out;
 }
 
-    blockquote:hover {
-        opacity: 0.9;
-    }
-
-    blockquote::before {
-        color: #dd835e;
+    blockquote p::after,
+    blockquote p::before {
+        color: #ccc;
         font-size: 4.5em;
+        top: -10px;
         position: absolute;
     }
 
-    blockquote::after {
-        content: '';
+    blockquote:hover :before,
+    blockquote:hover :after {
+        color: #dd835e;
     }
 
     blockquote.left {
@@ -162,12 +160,6 @@ blockquote {
         text-align: left;
     }
 
-        blockquote.left::before {
-            content: "\201C";
-            left: 10px;
-            top: -10px;
-        }
-
     blockquote.right {
         border-right: 10px solid #ccc;
         float: right;
@@ -175,8 +167,12 @@ blockquote {
         padding-right: 70px;
     }
 
-        blockquote.right::before {
+        blockquote p::before {
+            content: "\201C";
+            left: 25px;
+        }
+
+        blockquote p::after {
             content: "\201D";
             right: 25px;
-            top: -10px;
         }
