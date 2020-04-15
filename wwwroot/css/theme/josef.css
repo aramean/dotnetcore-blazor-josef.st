@@ -126,7 +126,7 @@ a,
 }
 
 blockquote {
-    font-size: 1.1em;
+    font-size: 1rem !important;
     width: 60%;
     margin: 15px auto;
     font-style: italic;
@@ -154,14 +154,6 @@ blockquote {
 
     blockquote::after {
         content: '';
-    }
-
-    blockquote span {
-        display: block;
-        color: #5c3137;
-        font-style: normal;
-        margin-top: 1em;
-        font-size: .8em;
     }
 
     blockquote.left {
