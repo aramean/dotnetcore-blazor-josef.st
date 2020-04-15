@@ -6,44 +6,44 @@
 @inject IHttpClientFactory httpClientFactory
 
 <h1><BSBadge>@TotalItems</BSBadge> Quotes</h1>
-    <hr />
-    @if (items == null)
-    {
-        <p><em>Loading...</em></p>
-    }
-    else
-    {
-        int i = 0;
-        string move;
+<hr />
+@if (items == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    int i = 0;
+    string move;
 
-        @foreach (var item in items)
+    @foreach (var item in items)
+    {
+        if (i % 2 == 0)
         {
-            if (i%2 == 0)
-            {
-                move = "right";
-            }
-            else
-            {
-                move = "left";
-            }
-            <blockquote class="blockquote @move">
-            <p class="mb-0">@item.Quotation</p>
-                <footer class="blockquote-footer"><cite title="Josef Gabrielsson">Josef Gabrielsson</cite></footer>
+            move = "right";
+        }
+        else
+        {
+            move = "left";
+        }
+        <blockquote class="@move">
+            @item.Quotation
+                <span>- Josef Gabrielsson</span>
             </blockquote>
-            i++;
-        }
+        i++;
     }
+}
 
-    @code {
+@code {
 
-        private Quote[] items;
+    private Quote[] items;
 
-        public int TotalItems { get; set; } = 0;
-        
-        protected override async Task OnInitializedAsync()
-        {
-            var client = httpClientFactory.CreateClient("default");
-            items = await client.GetJsonAsync<Quote[]>("quotes.json");
-            TotalItems = items.Count();
-        }
+    public int TotalItems { get; set; } = 0;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var client = httpClientFactory.CreateClient("default");
+        items = await client.GetJsonAsync<Quote[]>("quotes.json");
+        TotalItems = items.Count();
     }
+}
