@@ -1,296 +1,362 @@
 ﻿[
   {
     "Id": 1,
-    "Title": ".NET Core"
+    "Title": ".NET Core",
+    "Type": 0,
+    "Category": 1
   },
   {
     "Id": 2,
     "Title": "Blazor",
-    "Type": 7
+    "Type": 7,
+    "Category": 1
   },
   {
     "Id": 3,
     "Title": "Razor",
-    "Type": 7
+    "Type": 7,
+    "Category": 1
   },
   {
     "Id": 4,
-    "Title": "DevOps"
+    "Title": "DevOps",
+    "Type": 0,
+    "Category": 1
   },
   {
     "Id": 5,
-    "Title": "Entity Framework"
+    "Title": "Entity Framework",
+    "Type": 0,
+    "Category": 1
   },
   {
     "Id": 6,
     "Title": "Microsoft Azure",
-    "Type": 21
+    "Type": 21,
+    "Category": 1
   },
   {
     "Id": 7,
     "Title": "C#",
-    "Type": 1
+    "Type": 1,
+    "Category": 1
   },
   {
     "Id": 8,
     "Title": "JavaScript",
-    "Type": 1
+    "Type": 1,
+    "Category": 1
   },
   {
     "Id": 9,
     "Title": "HTML",
-    "Type": 6
+    "Type": 6,
+    "Category": 1
   },
   {
     "Id": 10,
     "Title": "React",
-    "Type": 7
+    "Type": 7,
+    "Category": 1
   },
   {
     "Id": 11,
     "Title": "Ionic",
-    "Type": 12
+    "Type": 12,
+    "Category": 1
   },
   {
     "Id": 12,
     "Title": "Cordova",
-    "Type": 12
+    "Type": 12,
+    "Category": 1
   },
   {
     "Id": 13,
     "Title": "Python",
-    "Type": 1
+    "Type": 1,
+    "Category": 1
   },
   {
     "Id": 14,
     "Title": "PHP",
-    "Type": 1
+    "Type": 1,
+    "Category": 1
   },
   {
     "Id": 15,
     "Title": "Java EE",
-    "Type": 1
+    "Type": 1,
+    "Category": 1
   },
   {
     "Id": 16,
     "Title": "Java for Android",
-    "Type": 1
+    "Type": 1,
+    "Category": 1
   },
   {
     "Id": 17,
     "Title": "Go",
-    "Type": 1
+    "Type": 1,
+    "Category": 1
   },
   {
     "Id": 18,
     "Title": "WordPress",
-    "Type": 10
+    "Type": 10,
+    "Category": 1
   },
   {
     "Id": 18,
     "Title": "Drupal",
-    "Type": 10
+    "Type": 10,
+    "Category": 1
   },
   {
     "Id": 18,
     "Title": "MariaDB",
-    "Type": 2
+    "Type": 2,
+    "Category": 1
   },
   {
     "Id": 19,
-    "Title": "LINQ"
+    "Title": "LINQ",
+    "Type": 0,
+    "Category": 1
   },
   {
     "Id": 20,
-    "Title": "OData"
+    "Title": "OData",
+    "Type": 0,
+    "Category": 1
   },
   {
     "Id": 21,
     "Title": "SQL Server",
-    "Type": 2
+    "Type": 2,
+    "Category": 1
   },
   {
     "Id": 22,
     "Title": "Azure Data Studio",
-    "Type": 9
+    "Type": 9,
+    "Category": 1
   },
   {
     "Id": 23,
     "Title": "Docker",
-    "Type": 22
+    "Type": 22,
+    "Category": 1
   },
   {
     "Id": 24,
-    "Title": "Kitematic"
+    "Title": "Kitematic",
+    "Type": 0,
+    "Category": 1
   },
   {
     "Id": 25,
     "Title": "Office 365",
-    "Type": 24
+    "Type": 24,
+    "Category": 1
   },
   {
     "Id": 26,
     "Title": "Visual Basic",
-    "Type": 1
+    "Type": 1,
+    "Category": 1
   },
   {
     "Id": 27,
     "Title": "GIT",
-    "Type": 11
+    "Type": 11,
+    "Category": 1
   },
   {
     "Id": 28,
     "Title": "GitHub",
-    "Type": 19
+    "Type": 19,
+    "Category": 1
   },
   {
     "Id": 29,
     "Title": "GitLab",
-    "Type": 19
+    "Type": 19,
+    "Category": 1
   },
   {
     "Id": 30,
     "Title": "Trello",
-    "Type": 20
+    "Type": 20,
+    "Category": 1
   },
   {
     "Id": 31,
     "Title": "Azure Boards",
-    "Type": 20
+    "Type": 20,
+    "Category": 1
   },
   {
     "Id": 32,
     "Title": "Pivotal Tracker",
-    "Type": 20
+    "Type": 20,
+    "Category": 1
   },
   {
     "Id": 33,
     "Title": "Jira",
-    "Type": 20
+    "Type": 20,
+    "Category": 1
   },
   {
     "Id": 34,
     "Title": "Bootstrap",
-    "Type": 7
+    "Type": 7,
+    "Category": 1
   },
   {
     "Id": 35,
     "Title": "jQuery",
-    "Type": 18
+    "Type": 18,
+    "Category": 1
   },
   {
     "Id": 36,
     "Title": "Visual Studio",
-    "Type": 8
+    "Type": 8,
+    "Category": 1
   },
   {
     "Id": 37,
     "Title": "Visual Studio Code",
-    "Type": 8
+    "Type": 8,
+    "Category": 1
   },
   {
     "Id": 38,
     "Title": "Linux",
-    "Type": 3
+    "Type": 3,
+    "Category": 1
   },
   {
     "Id": 39,
     "Title": "macOS",
-    "Type": 3
+    "Type": 3,
+    "Category": 1
   },
   {
     "Id": 40,
     "Title": "Windows Server",
-    "Type": 3
+    "Type": 3,
+    "Category": 1
   },
   {
     "Id": 41,
     "Title": "Locust",
-    "Type": 17
+    "Type": 17,
+    "Category": 1
   },
   {
     "Id": 42,
     "Title": "Postman",
-    "Type": 23
+    "Type": 23,
+    "Category": 1
   },
   {
     "Id": 43,
     "Title": "Insomnia",
-    "Type": 23
+    "Type": 23,
+    "Category": 1
   },
   {
     "Id": 44,
     "Title": "Eclipse",
-    "Type": 8
+    "Type": 8,
+    "Category": 1
   },
   {
     "Id": 45,
     "Title": "Android Studio",
-    "Type": 8
+    "Type": 8,
+    "Category": 1
   },
   {
     "Id": 46,
     "Title": "PostgresSQL",
-    "Type": 2
+    "Type": 2,
+    "Category": 1
   },
   {
     "Id": 47,
     "Title": "SQL Server Management Studio",
-    "Type": 9
+    "Type": 9,
+    "Category": 1
   },
   {
     "Id": 48,
     "Title": "Adobe Photoshop",
-    "Type": 13
+    "Type": 13,
+    "Category": 1
   },
   {
     "Id": 49,
     "Title": "Adobe Illustrator",
-    "Type": 13
+    "Type": 13,
+    "Category": 1
   },
   {
     "Id": 50,
     "Title": "Gimp",
-    "Type": 13
+    "Type": 13,
+    "Category": 1
   },
   {
     "Id": 51,
     "Title": "Inkscape",
-    "Type": 13
+    "Type": 13,
+    "Category": 1
   },
   {
     "Id": 52,
     "Title": "Bash",
-    "Type": 14
+    "Type": 14,
+    "Category": 1
   },
   {
     "Id": 53,
     "Title": "Cascading Style Sheets (CSS)",
-    "Type": 15
+    "Type": 15,
+    "Category": 1
   },
   {
     "Id": 54,
     "Title": "JUnit",
-    "Type": 17
+    "Type": 17,
+    "Category": 1
   },
   {
     "Id": 55,
     "Title": "xUnit",
-    "Type": 17
+    "Type": 17,
+    "Category": 1
   },
   {
     "Id": 56,
     "Title": "Pencil",
-    "Type": 16
+    "Type": 16,
+    "Category": 1
   },
   {
     "Id": 57,
     "Title": "Mockito",
-    "Type": 17
+    "Type": 17,
+    "Category": 1
   },
   {
     "Id": 58,
     "Title": "Fat-Free Framework",
-    "Type": 7
+    "Type": 7,
+    "Category": 1
   }
 ]
