@@ -6,5 +6,6 @@ namespace josef.Data
     {
         public int Id { get; set; }
         public string Title { get; set; }
+        public int HtmlIcon { get; set; }
     }
 }
