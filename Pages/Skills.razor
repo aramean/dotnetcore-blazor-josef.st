@@ -32,57 +32,61 @@
         </BSFormRow>
     </BSBasicForm>
 </BSCollapse>
-    <hr />
-    <h3>Technical</h3>
-    <h5 class="ml-1"><span class="oi oi-tag text-info"></span> Software</h5>
-    @if (items == null)
-    {
-        <p><em>Loading...</em></p>
-    }
-    else
-    {
-        <BSTable>
-            <BSTableHead TableHeadType="TableHeadType.Light">
+<hr />
+<h3>Technical</h3>
+<nav>
+    <div class="nav nav-tabs border-0" id="nav-tab" role="tablist">
+        <a class="nav-item nav-link bg-light border-0 active" id="nav-home-tab" data-toggle="tab" role="tab" aria-controls="nav-home" aria-selected="true"><h5>Software</h5></a>
+    </div>
+</nav>
+@if (items == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <BSTable>
+        <BSTableHead TableHeadType="TableHeadType.Light">
+            <tr>
+                <th>Skill</th>
+                <th>Type</th>
+                <th>-</th>
+                <th>-</th>
+            </tr>
+        </BSTableHead>
+        <tbody>
+            @foreach (var item in items)
+            {
                 <tr>
-                    <th>Skill</th>
-                    <th>Type</th>
-                    <th>-</th>
-                    <th>-</th>
+                    <td>@item.Title</td>
+                    <td>@EnumExtensions.GetDisplayName(item.Type)</td>
+                    <td></td>
                 </tr>
-            </BSTableHead>
-            <tbody>
-                @foreach (var item in items)
-                {
-                    <tr>
-                        <td>@item.Title</td>
-                        <td>@EnumExtensions.GetDisplayName(item.Type)</td>
-                        <td></td>
-                    </tr>
-                }
-            </tbody>
-        </BSTable>
+            }
+        </tbody>
+    </BSTable>
+}
+
+<h3>Conceptual</h3>
+<h3>Interpersonal</h3>
+
+@code {
+
+    private Skill[] items;
+
+    public int TotalItems { get; set; } = 0;
+    bool IsOpen { get; set; } = false;
+
+    void collapse(MouseEventArgs a)
+    {
+        IsOpen = !IsOpen;
+        StateHasChanged();
     }
 
-    <h3>Conceptual</h3>
-    <h3>Interpersonal</h3>
-
-    @code {
-
-        private Skill[] items;
-
-        public int TotalItems { get; set; } = 0;
-        bool IsOpen { get; set; } = false;
-
-        void collapse(MouseEventArgs a)
-        {
-            IsOpen = !IsOpen;
-            StateHasChanged();
-        }
-
-        protected override async Task OnInitializedAsync()
-        {
-            var client = httpClientFactory.CreateClient("default");
-            items = await client.GetJsonAsync<Skill[]>("skills.json");
-            TotalItems = items.Count();
-        }
+    protected override async Task OnInitializedAsync()
+    {
+        var client = httpClientFactory.CreateClient("default");
+        items = await client.GetJsonAsync<Skill[]>("skills.json");
+        TotalItems = items.Count();
     }
+}
