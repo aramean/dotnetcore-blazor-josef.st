@@ -177,8 +177,7 @@ blockquote {
         }
 
     blockquote.right {
-        border-right: 0;
-        border-left: 10px solid #ccc;
+        border-right: 10px solid #ccc;
         float: right;
         text-align: right;
         padding-right: 70px;
