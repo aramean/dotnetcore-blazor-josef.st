@@ -358,5 +358,35 @@
     "Title": "Fat-Free Framework",
     "Type": 7,
     "Category": 1
+  },
+  {
+    "Id": 59,
+    "Title": "Planning",
+    "Type": 0,
+    "Category": 2
+  },
+  {
+    "Id": 60,
+    "Title": "Organizing",
+    "Type": 0,
+    "Category": 2
+  },
+  {
+    "Id": 61,
+    "Title": "Analytic",
+    "Type": 0,
+    "Category": 2
+  },
+  {
+    "Id": 62,
+    "Title": "Positivity",
+    "Type": 0,
+    "Category": 3
+  },
+  {
+    "Id": 63,
+    "Title": "Honesty",
+    "Type": 0,
+    "Category": 3
   }
 ]
