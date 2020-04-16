@@ -40,10 +40,6 @@ a, .btn-link {
             margin-left: 1.5rem;
         }
 
-.sidebar {
-    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
-}
-
     .sidebar .top-row {
         background-color: rgba(0,0,0,0.4);
     }
@@ -61,7 +57,7 @@ a, .btn-link {
 
     .sidebar .navbar-brand .name .latin {
         font-size: 0.8em;
-        padding-top: 0.2rem;
+        padding-top: 0.3rem;
     }
 
     .sidebar .navbar-brand .top-row .dropdown {
