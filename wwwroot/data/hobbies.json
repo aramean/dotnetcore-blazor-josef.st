@@ -14,7 +14,7 @@
   {
     "Id": 3,
     "Title": "Drawing",
-    "HtmlIcon": 127912,
+    "HtmlIcon": 9997,
     "Comment": ""
   },
   {
@@ -39,6 +39,18 @@
     "Id": 7,
     "Title": "Cultivating",
     "HtmlIcon": 127793,
+    "Comment": ""
+  },
+  {
+    "Id": 8,
+    "Title": "Studying",
+    "HtmlIcon": 127891,
+    "Comment": ""
+  },
+  {
+    "Id": 8,
+    "Title": "Designing",
+    "HtmlIcon": 128395,
     "Comment": ""
   }
 ]
