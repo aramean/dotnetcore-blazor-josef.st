@@ -373,7 +373,7 @@
   },
   {
     "Id": 61,
-    "Title": "Analytic",
+    "Title": "Analyzing",
     "Type": 0,
     "Category": 2
   },
@@ -391,7 +391,25 @@
   },
   {
     "Id": 64,
-    "Title": "Strategic thinking",
+    "Title": "Strategizing",
+    "Type": 0,
+    "Category": 2
+  },
+  {
+    "Id": 65,
+    "Title": "Decisioning",
+    "Type": 0,
+    "Category": 2
+  },
+  {
+    "Id": 66,
+    "Title": "Judgmenting",
+    "Type": 0,
+    "Category": 2
+  },
+  {
+    "Id": 67,
+    "Title": "Collaborating",
     "Type": 0,
     "Category": 2
   }
