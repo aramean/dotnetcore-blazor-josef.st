@@ -39,25 +39,17 @@
     }
     else
     {
-        <BSTable>
-            <BSTableHead TableHeadType="TableHeadType.Light">
-                <tr>
-                    <th>Interest</th>
-                    <th>-</th>
-                    <th>-</th>
-                    <th>-</th>
-                </tr>
-            </BSTableHead>
-            <tbody>
-                @foreach (var item in items)
-                {
-                    <tr>
-                        <td>@item.Title</td>
-                        <td></td>
-                    </tr>
-                }
-            </tbody>
-        </BSTable>
+        <BSCard CardType="CardType.Columns">
+            @foreach (var item in items)
+            {
+                <BSCard>
+                    <BSCard CardType="CardType.Body">
+                        <BSCard CardType="CardType.Title">@item.Title</BSCard>
+                        <BSCard CardType="CardType.Text">@item.Comment</BSCard>
+                    </BSCard>
+                </BSCard>
+             }
+        </BSCard>
     }
 
     @code {

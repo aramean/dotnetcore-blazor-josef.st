@@ -95,6 +95,10 @@ a, .btn-link {
         top: -2px;
     }
 
+.card-title{
+    font-weight: 600;
+}
+
 .nav-item {
     font-size: 0.9rem;
     padding-bottom: 0.5rem;
