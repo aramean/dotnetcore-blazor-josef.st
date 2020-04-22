@@ -388,5 +388,11 @@
     "Title": "Honesty",
     "Type": 0,
     "Category": 3
+  },
+  {
+    "Id": 64,
+    "Title": "Strategic thinking",
+    "Type": 0,
+    "Category": 2
   }
 ]

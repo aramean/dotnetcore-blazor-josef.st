@@ -65,7 +65,7 @@ else
             {
                 if (item.Category.Equals(EnumName)) {
                 <tr>
-                    <td>@item.Title</td>
+                    <td>@(@item.Category.Equals(3) ? "&#128505;" : "") @item.Title</td>
                     <td>@EnumExtensions.GetDisplayName(item.Type)</td>
                 </tr>
                 }
