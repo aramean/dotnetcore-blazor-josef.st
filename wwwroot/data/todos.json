@@ -4,41 +4,41 @@
     "Title": "Work for Microsoft",
     "Type": 0,
     "Status": 0,
-    "Category": 0
+    "Category": 3
   },
   {
     "Id": 2,
     "Title": "Move to USA",
     "Status": 0,
-    "Category": 0
+    "Category": 6
   },
   {
     "Id": 3,
     "Title": "Buy a house",
     "Type": 0,
     "Status": 0,
-    "Category": 0
+    "Category": 11
   },
   {
     "Id": 5,
     "Title": "Get married",
     "Type": 0,
     "Status": 0,
-    "Category": 0
+    "Category": 2
   },
   {
     "Id": 5,
     "Title": "Have children",
     "Type": 0,
     "Status": 0,
-    "Category": 0
+    "Category": 2
   },
   {
     "Id": 6,
     "Title": "Travel to Israel",
     "Type": 0,
-    "Status": 0,
-    "Category": 0
+    "Status": 1,
+    "Category": 1
   },
   {
     "Id": 7,
@@ -51,22 +51,22 @@
     "Id": 8,
     "Title": "Travel to Japan",
     "Type": 0,
-    "Status": 0,
-    "Category": 0
+    "Status": 1,
+    "Category": 1
   },
   {
     "Id": 9,
     "Title": "Travel to Greek",
     "Type": 0,
     "Status": 0,
-    "Category": 0
+    "Category": 1
   },
   {
     "Id": 10,
     "Title": "Travel to Italy",
     "Type": 0,
-    "Status": 0,
-    "Category": 0
+    "Status": 1,
+    "Category": 1
   },
   {
     "Id": 11,
@@ -81,5 +81,12 @@
     "Type": 0,
     "Status": 0,
     "Category": 0
+  },
+  {
+    "Id": 13,
+    "Title": "Work for the Police",
+    "Type": 0,
+    "Status": 0,
+    "Category":  3
   }
 ]

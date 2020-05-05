@@ -20,11 +20,27 @@ namespace josef.Data
 
     public enum TodoCategory
     {
+        [Display(Name = "Travel")]
+        TRAVEL = 1,
+        [Display(Name = "Relationship")]
+        RELATIONSHIPS = 2,
+        [Display(Name = "Career")]
+        CAREER = 3,
+        [Display(Name = "Financial")]
+        FINANCIAL = 4,
+        [Display(Name = "Entertainment")]
+        ENTERTAINMENT = 5,
+        [Display(Name = "Adventure")]
+        ADVENTURE = 6,
+        [Display(Name = "Contribution")]
+        CONTRIBUTION = 7,
+        [Display(Name = "Creativity")]
+        CREATIVITY = 8,
+        [Display(Name = "Education")]
+        EDUCATION  = 9,
         [Display(Name = "Health")]
-        HEALTH = 1,
-        [Display(Name = "School")]
-        SCHOOL = 2,
-        [Display(Name = "Work")]
-        WORK = 3,
+        HEALTH = 10,
+        [Display(Name = "Possession")]
+        POSSESSION = 11,
     }
 }
