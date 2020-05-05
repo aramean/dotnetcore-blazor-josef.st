@@ -118,5 +118,14 @@
     "Description": {
       "sv_SE": "Västsverige växer är ett pedagogiskt material om hållbart samhällsbyggande för åk 7-9 samt gymnasiet."
     }
+  },
+  {
+    "Id": 19,
+    "Title": "Hållbarhetsverktyget",
+    "StartDate": "2019-01-01",
+    "EndDate": "2020-05-28",
+    "Description": {
+      "sv_SE": "Verktyget räknar ut den klimatpåverkan som de boendes resor kommer att innebära, sett till energiförbrukning och koldioxidutsläpp."
+    }
   }
 ]
