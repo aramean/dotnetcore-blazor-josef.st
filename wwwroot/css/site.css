@@ -156,6 +156,18 @@ a, .btn-link {
     color: red;
 }
 
+.color-green {
+    color: green;
+}
+
+.color-lightgray {
+    color: lightgray;
+}
+
+.color-whitesmoke {
+    color: whitesmoke;
+}
+
 @media (max-width: 767.98px) {
     .main .top-row {
         display: none;

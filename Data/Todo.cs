@@ -8,6 +8,7 @@ namespace josef.Data
     {
         public int Id { get; set; }
         public string Title { get; set; }
+        public short Status { get; set; }
         public TodoCategory Category { get; set; }
         public TodoType Type { get; set; }
     }

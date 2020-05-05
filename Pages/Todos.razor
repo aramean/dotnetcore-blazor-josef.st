@@ -65,7 +65,14 @@ else
             {
                 if (item.Category.Equals(EnumName)) {
                 <tr>
-                    <td>@(@item.Category.Equals(3) ? "&#128505;" : "") @item.Title</td>
+                    <td>
+                        @if (@item.Status == 0)  { 
+                            <i class="oi oi-task color-whitesmoke"></i>
+                        } else {
+                            <i class="oi oi-task color-green"></i>
+                        }
+                        @item.Title
+                    </td>
                     <td>@EnumExtensions.GetDisplayName(item.Type)</td>
                 </tr>
                 }
