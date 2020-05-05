@@ -56,7 +56,7 @@
   },
   {
     "Id": 9,
-    "Title": "Travel to Greek",
+    "Title": "Travel to Greece",
     "Type": 0,
     "Status": 0,
     "Category": 1
@@ -87,6 +87,49 @@
     "Title": "Work for the Police",
     "Type": 0,
     "Status": 0,
-    "Category":  3
+    "Category": 3
+  },
+  {
+    "Id": 14,
+    "Title": "Travel to USA",
+    "Type": 0,
+    "Status": 0,
+    "Category": 1
+  },
+  {
+    "Id": 15,
+    "Title": "Travel to UK",
+    "Type": 0,
+    "Status": 0,
+    "Category": 1
+  },
+  {
+    "Id": 16,
+    "Title": "Travel to Canada",
+    "Type": 0,
+    "Status": 0,
+    "Category": 1
+  },
+  {
+    "Id": 17,
+    "Title": "Swim with dolphins",
+    "Type": 0,
+    "Status": 0,
+    "Category": 5
+  },
+  {
+    "Id": 18,
+    "Title": "Buy an electric car",
+    "Type": 0,
+    "Status": 0,
+    "Category": 11
+  },
+  {
+    "Id": 19,
+    "Title": "Get a Six-Pack",
+    "Type": 0,
+    "Status": 0,
+    "Category": 10
   }
+
 ]
