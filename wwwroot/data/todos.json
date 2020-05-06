@@ -143,13 +143,13 @@
     "Title": "Paint a picture",
     "Type": 0,
     "Status": 1,
-    "Category": 9
+    "Category": 8
   },
   {
     "Id": 22,
     "Title": "Make a song",
     "Type": 0,
     "Status": 0,
-    "Category": 9
+    "Category": 8
   }
 ]
