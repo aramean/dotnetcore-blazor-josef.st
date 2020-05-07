@@ -1,10 +1,14 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpOverrides;
+using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Options;
 using System;
+using System.Globalization;
 
 namespace josef
 {
@@ -21,8 +25,30 @@ namespace josef
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddRazorPages();
+            services.AddRazorPages().AddViewLocalization(
+                    LanguageViewLocationExpanderFormat.Suffix,
+                    opts => { opts.ResourcesPath = "Resources"; })
+                .AddDataAnnotationsLocalization();
+
             services.AddServerSideBlazor();
+
+            services.Configure<RequestLocalizationOptions>(
+               opts =>
+               {
+                   var supportedCultures = new[]
+                        {
+                            new CultureInfo("en-US"),
+                            new CultureInfo("sv-SE"),
+                            new CultureInfo("syr-SY")
+                        };
+
+                   opts.DefaultRequestCulture = new RequestCulture("en-US");
+                   opts.SupportedCultures = supportedCultures;
+                   opts.SupportedUICultures = supportedCultures;
+               });
+
+            services.AddLocalization(opts => { opts.ResourcesPath = "Resources"; });
+
             services.AddHttpClient("default", client =>
             {
                 client.BaseAddress = new Uri(Configuration["BaseUrl"]);
@@ -49,6 +75,8 @@ namespace josef
                 app.UseAuthentication();
             }
 
+            //var options = app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>();
+            app.UseRequestLocalization();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
