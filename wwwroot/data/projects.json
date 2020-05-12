@@ -127,5 +127,50 @@
     "Description": {
       "sv_SE": "Verktyget räknar ut den klimatpåverkan som de boendes resor kommer att innebära, sett till energiförbrukning och koldioxidutsläpp."
     }
+  },
+  {
+    "Id": 20,
+    "Title": "VIP Parking",
+    "StartDate": "2015-01-01",
+    "EndDate": "2015-05-28",
+    "Description": {
+      "sv_SE": ""
+    }
+  },
+  {
+    "Id": 21,
+    "Title": "E-concierge",
+    "StartDate": "2015-01-01",
+    "EndDate": "2015-05-28",
+    "Description": {
+      "sv_SE": ""
+    }
+  },
+  {
+    "Id": 22,
+    "Title": "Biometric",
+    "StartDate": "2015-01-01",
+    "EndDate": "2015-05-28",
+    "Description": {
+      "sv_SE": ""
+    }
+  },
+  {
+    "Id": 23,
+    "Title": "Act By Heart",
+    "StartDate": "2015-01-01",
+    "EndDate": "2015-05-28",
+    "Description": {
+      "sv_SE": ""
+    }
+  },
+  {
+    "Id": 24,
+    "Title": "Castra",
+    "StartDate": "2015-01-01",
+    "EndDate": "2015-05-28",
+    "Description": {
+      "sv_SE": ""
+    }
   }
 ]
